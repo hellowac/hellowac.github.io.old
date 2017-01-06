@@ -1,0 +1,14 @@
+# Site settings
+title: hellowac Blog
+SEOTitle: 王超的博客 | wac Blog
+email: hellowac@gmail.com
+description: "python 开发 | 王超，python"
+keyword: "王超, hellowac, 王超的博客, hello wac, 博客, python"
+url: "https://hellowac.github.io"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# SNS settings
+github_username:    hellowac
+# twitter_username:  hellowac
+# facebook_username:  hellowac
+# linkedin_username:  firstname-lastname-idxxxx
