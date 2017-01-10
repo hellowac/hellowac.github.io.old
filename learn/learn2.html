@@ -1,0 +1,64 @@
+--- 
+title: learn2
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>And the winner isn't</title>
+    <link href="css/learn/html5normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/learn/main2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- the header and navigation -->
+        <div id="header" role="banner" class="group">
+            <a href="/"><div id="logo">And the winner is<span>n't...</span></div></a>
+            <div id="navigation">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li>
+                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <!-- the sidebar -->
+        <div id="sidebar">
+            <div class="sideBlock unSung">
+                <h4>Unsung heroes...</h4>
+                <a href="#"><img class="sideImage" src="img/learn/midnightRun.jpg" alt="Midnight Run" /></a>
+                <a href="#"><img class="sideImage" src="img/learn/wyattEarp.jpg" alt="Wyatt Earp" /></a>
+            </div>
+            <div class="sideBlock overHyped">
+                <h4>Overhyped nonsense...</h4>
+                <a href="#"><img class="sideImage" src="img/learn/moulinRouge.jpg" alt="Moulin Rouge" /></a>
+                <a href="#"><img class="sideImage" src="img/learn/kingKong.jpg" alt="King Kong" /></a>
+            </div>
+            <p>here is the sidebar</p>
+        </div>
+        <!-- the content -->
+        <div id="content">
+            <img class="oscarMain" src="img/learn/oscar.png" alt="atwi_oscar" />
+            <h1>Every year <em>when I watch the Oscars I'm annoyed…</em></h1>
+            <p>that films like <b>King Kong</b>, <b>Moulin Rouge</b> and <b>Munich</b> get the statue whilst the <em>real</em> cinematic heroes lose out. Not very Hollywood is it?</p>
+            <p><i>We’re here to put things right.</i></p>
+            <a class="button" href="#">these should have won <span>&raquo;</span></a> 
+            <p>here is the content</p>
+        </div>
+        <!-- the footer -->
+        <div id="footer">
+            <p>Note: our opinion is absolutely correct. You are wrong, even if you think you are right. That’s a fact. Deal with it. <span> Made by <a href="#">benfrain.com</a>. </span><span> Site code as <a href="/RWDHTML5CSS3_ATWI_CODE.zip">ZIP file</a></span></p> df
+            <p>Here is the footer</p>
+        </div>
+    </div>
+</body>
+
+</html>

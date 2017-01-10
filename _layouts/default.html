@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="no-js" lang="zh" dir="ltr">
+<!--start head -->
 {% include head.html %}
+<!--end head -->
+<body>
+    <div id="sitemast">
+        <img src="{{ " /static/img/firewatch-alt.jpg " }}"/>
+    </div>
+    <!--start nav -->
+    {% include nav.html %} 
+    <!--end nav -->
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
+    <!--start content -->
+    {{ content }} 
+    <!--end content -->
 
-    {% include nav.html %}
-
-    {{ content }}
-
+    <!--start footer -->
     {% include footer.html %}
-
+    <!--end footer -->
 </body>
 
 </html>

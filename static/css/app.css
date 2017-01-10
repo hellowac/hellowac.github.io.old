@@ -1,0 +1,36 @@
+body {
+    background-color: #fefefe;
+    /*background: linear-gradient(96deg, #0c0401 3%, #170900 2%,#231002 1%, #fce233 50%, #412700 100%)*/
+}
+
+#sitemast img{
+    /*box-shadow: 0 0 10px #150900,*/
+                /*0 0 10px #b17228, */
+                /*0 0 10px #f8aa18, */
+                /*0 0 10px #0a0a0a;*/
+}
+
+code {
+    border: none; 
+    background-color: #f8f8f8;
+}
+.navigation {
+    border-bottom: 1px solid #fefefe;
+}
+
+.navigation, .navigation ul {
+    background-color: #1779ba;
+}
+
+.navigation .menu > li > a {
+    color:black;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 640px) {
+    .navigation .menu > li > a {
+        padding: 0 0;
+        display: block;
+        line-height: 1.8;
+    }
+}

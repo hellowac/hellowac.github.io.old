@@ -1,48 +1,18 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="{{ site.keyword }}">
+    <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.baseurl }}/img/hellowac_favicon.ico">
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ " /css/bootstrap.min.css " | prepend: site.baseurl }}">
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ " /css/syntax.css " | prepend: site.baseurl }}">
-    <script></script>
-    
-    <!-- html5和css3学习 -->
-    <style>
-    body {
-        background-color: grey;
-    }
-    
-    @media screen and (max-width: 960px) {
-        body {
-            background-color: red;
-        }
-    }
-    
-    @media screen and (max-width: 768px) {
-        body {
-            background-color: orange;
-        }
-    }
-    
-    @media screen and (max-width: 550px) {
-        body {
-            background-color: yellow;
-        }
-    }
-    
-    @media screen and (max-width: 320px) {
-        body {
-            background-color: green;
-        }
-    }
-    </style>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <!-- foundation 框架css -->
+    <link rel="stylesheet" href="/static/css/foundation.css">
+    <!-- pygemnts 代码高亮css -->
+    <link rel="stylesheet" href="/static/css/syntax.css">
+    <!-- 自定义css -->
+    <link rel="stylesheet" href="/static/css/app.css">
 </head>
