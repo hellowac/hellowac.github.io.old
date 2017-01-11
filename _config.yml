@@ -1,0 +1,14 @@
+url: hellowac.github.io
+author: hello wac
+title: Hello Wac
+description: "王超的网络日志"
+show_downloads: false
+create_time: 2017-01-11
+google_analytics: UA-90202913-1
+
+github: { repository_name: hellowac.github.io, is_project_page: true, repository_url: 'https://github.com/hellowac/', }
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
