@@ -1,0 +1,146 @@
+a {
+   color: #474747;
+}
+
+#main-content {
+  float: left;
+  width: 690px; }
+
+#main-content img {
+  max-width: 100%; }
+
+/* GENERAL ELEMENT TYPE STYLES */
+#main-content h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 2.8em;
+  font-weight: normal;
+  color: #474747;
+  text-indent: 6px;
+  letter-spacing: -1px; }
+
+#main-content h1:before {
+  padding-right: 0.3em;
+  margin-left: -0.9em;
+  color: #9ddcff;
+  content: "/"; }
+
+#main-content h2 {
+  margin-bottom: 8px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #474747;
+  text-indent: 4px; }
+
+#main-content h2:before {
+  padding-right: 0.3em;
+  margin-left: -1.5em;
+  content: "//";
+  color: #9ddcff; }
+
+#main-content h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #474747;
+  text-indent: 3px; }
+
+#main-content h3:before {
+  padding-right: 0.3em;
+  margin-left: -2em;
+  content: "///";
+  color: #9ddcff; }
+
+#main-content h4 {
+  margin-bottom: 8px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #474747;
+  text-indent: 3px; }
+
+h4:before {
+  padding-right: 0.3em;
+  margin-left: -2.8em;
+  content: "////";
+  color: #9ddcff; }
+
+#main-content h5 {
+  margin-bottom: 8px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 14px;
+  color: #474747;
+  text-indent: 3px; }
+
+h5:before {
+  padding-right: 0.3em;
+  margin-left: -3.2em;
+  content: "/////";
+  color: #9ddcff; }
+
+#main-content h6 {
+  margin-bottom: 8px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: .8em;
+  color: #474747;
+  text-indent: 3px; }
+
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .inner {
+        width: 740px;
+    }
+    header h1,
+    header h2 {
+        width: 340px;
+    }
+    header h1 {
+        font-size: 60px;
+    }
+    header h2 {
+        font-size: 30px;
+    }
+    #main-content {
+        width: 490px;
+    }
+    #main-content h1:before,
+    #main-content h2:before,
+    #main-content h3:before,
+    #main-content h4:before,
+    #main-content h5:before,
+    #main-content h6:before {
+        padding-right: 0;
+        margin-left: 0;
+        content: none;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    #main-content {
+        float: none;
+        width: 100% !important;
+    }
+    #main-content h1:before,
+    #main-content h2:before,
+    #main-content h3:before,
+    #main-content h4:before,
+    #main-content h5:before,
+    #main-content h6:before {
+        padding-right: 0;
+        margin-left: 0;
+        content: none;
+    }
+}
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
