@@ -1,23 +1,19 @@
-<!doctype html>
-<html class="no-js" lang="zh" dir="ltr">
-<!--start head -->
-{% include head.html %}
-<!--end head -->
-<body>
-    <div id="sitemast">
-        <img src="{{ " /static/img/firewatch-alt.jpg " }}"/>
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}{% include head.html %}
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+    <a href="#content-wrapper" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="wrapper">
+      <header role="banner">
+        {% include navigation.html %}
+      </header>
+      <div id="content-wrapper" role="main" class="">
+        <div class="inner clearfix">
+          {{ content | expand_urls: root_url }}
+        </div>
+      </div>
     </div>
-    <!--start nav -->
-    {% include nav.html %} 
-    <!--end nav -->
-
-    <!--start content -->
-    {{ content }} 
-    <!--end content -->
-
-    <!--start footer -->
-    {% include footer.html %}
-    <!--end footer -->
-</body>
-
+    <div id="footer">
+      {% include footer.html %}
+      {% include after_footer.html %}
+    </div>
+  </body>
 </html>
