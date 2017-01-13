@@ -1,4 +1,5 @@
 ---
+nav: blog
 layout: post
 title: "如何阅读一本书之 概述"
 author: "王超"
@@ -9,6 +10,11 @@ category:
   - 'Reading book'
 show: true
 ---
+
+[{{ site.nav.home.name }}]({% link index.md %})/
+[{{ site.nav.blog.name }}]({% link blog/index.md %})/
+[{{ site.nav.blog.subnav.reading.name }}]({% link blog/reading/index.md %})/
+{{ page.title }}
 
 ## 概述
 * 阅读是一件主动的事.

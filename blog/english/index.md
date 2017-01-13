@@ -1,8 +1,12 @@
 ---
 nav: blog
 layout: post
-title: "英语分类"
+title: "英语"
 ---
+
+[{{ site.nav.home.name }}]({% link index.md %})/
+[{{ site.nav.blog.name }}]({% link blog/index.md %})/
+{{ site.nav.blog.subnav.english.name }}
 
 {% for category in site.categories %}
 

@@ -12,12 +12,23 @@
         {% endif %}
         <nav id="nav">
             <ul>
-                <li class="{% if page.nav == 'home' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link index.md %}">Home</a></li>
-                <li class="{% if page.nav == 'blog' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link blog/index.md %}">Blog</a></li>
-                <li class="{% if page.nav == 'tags' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link tags/index.md %}">Tags</a></li>
-                <li class="{% if page.nav == 'project' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link project/index.md %}">Projects</a></li>
-                <li class="{% if page.nav == 'about' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link about/index.md %}">About</a></li>
-                <li class="{% if page.nav == 'refer' %} active {% else %} deactive {% endif %}"><a href="{{ site.baseurl }}{% link refer.md %}">Refer</a></li>
+                <li class="{% if page.nav == 'home' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link index.md %}">{{ site.nav.home.name }}</a></li>
+
+                <li class="{% if page.nav == 'blog' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link blog/index.md %}">{{ site.nav.blog.name }}</a></li>
+
+                <li class="{% if page.nav == 'tags' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link tags/index.md %}">{{ site.nav.tags.name }}</a></li>
+
+                <li class="{% if page.nav == 'project' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link projects/index.md %}">{{ site.nav.projects.name }}</a></li>
+
+                <li class="{% if page.nav == 'about' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link about/index.md %}">{{ site.nav.about.name }}</a></li>
+
+                <li class="{% if page.nav == 'refer' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link refer/index.md %}">{{ site.nav.refer.name }}</a></li>
             </ul>
         </nav>
     </div>

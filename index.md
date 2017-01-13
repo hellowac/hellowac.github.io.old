@@ -4,21 +4,22 @@ layout: post
 title: ""
 ---
 
+{{ site.nav.home.name }}/
+
 ## 最近发表
-{% for post in site.posts %}
+
+{% comment %} 
+最多输出几次
+{% endcomment %}
+
+{% for post in site.posts limit:20 %}
 {% if post.show %}
+
 * [{{ post.title }}]({{ post.url | absolute_url }})
+
 {% endif %}
 {% endfor %}
 
-{% for tag in site.categories %}
-## {{ tag[0] }}
-
-{% for post in tag[1] %}
-## [{{ post.title }}]({{ post.url | absolute_url }})
-{% endfor %}
-
-{% endfor %}
 
 
 

@@ -8,6 +8,27 @@ google_analytics: UA-90202913-1
 
 github: { repository_name: hellowac.github.io, is_project_page: true, repository_url: 'https://github.com/hellowac/', owner_name: "wangchao", }
 
+nav:
+  home:
+    name: '首页'
+  blog:
+    name: '博客'
+    subnav:
+      english:
+        name: '英语'
+      programing: 
+        name: '编程'
+      reading:
+        name: '阅读'
+  tags:
+    name: '标签'
+  projects:
+    name: '项目'
+  about:
+    name: '关于'
+  refer:
+    name: '参考'
+
 # Build settings
 exclude:
   - Gemfile
