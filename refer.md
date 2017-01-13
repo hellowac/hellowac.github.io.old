@@ -27,6 +27,7 @@ title: "参考的资料"
 
 ## 其他参考
 * **Github Gist:** <https://www.zhihu.com/question/21343711>
+* **Liquid用法笔记** <http://blog.csdn.net/dont27/article/details/38097581>
 
 ## markdown
 * 表格上方连不能有空格并且必须是空行才能转换成功.-,-

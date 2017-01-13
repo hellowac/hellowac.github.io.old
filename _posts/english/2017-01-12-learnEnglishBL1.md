@@ -6,7 +6,7 @@ tags:
   - English
   - Learn
 category:
-  - blog
+  - 'English Teach'
 show: true
 ---
 
