@@ -12,7 +12,7 @@ nav:
   home:
     name: '首页'
   blog:
-    name: '博客'
+    name: '日志'
     subnav:
       english:
         name: '英语'
