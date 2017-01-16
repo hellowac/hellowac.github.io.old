@@ -13,7 +13,7 @@ title: "英语"
 {% if category[0] == 'English Teach' %}
 
 {% for post in category[1] %}
-## [{{ post.title }}]({{ post.url | absolute_url }})
+## [{{ post.title }}]({{ post.url }})
 {% endfor %}
 
 {% endif %}
