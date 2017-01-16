@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "机器学习之一 -- 决策树"
+title: "机器学习 -- 决策树"
 author: "Pual"
 tags:
   - 'Machine Learn'

@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "机器学习之一 -- k-近邻算法"
+title: "机器学习 -- k-近邻算法"
 author: "Pual"
 tags:
   - 'Machine Learn'
