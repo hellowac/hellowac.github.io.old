@@ -88,6 +88,7 @@ def calcShannonEnt(dataSet):
 * __实践:__
 
 __创建数据:__
+
 ```python
 def createDataSet():
     """最后一列为结论
@@ -108,6 +109,7 @@ def createDataSet():
 ```
 
 __计算熵:__
+
 ```python
 In [15]: data,labels = createDataSet()
 
@@ -135,6 +137,7 @@ Out[84]: 1.3709505944546687
 ## 划分数据集:判断按照那个特征划分数据集是最好的划分方式.
 
 __划分数据:__
+
 ```python
 def splitDataSet(dataSet,axis,value):
     """划分数据集.
@@ -161,6 +164,7 @@ def splitDataSet(dataSet,axis,value):
 * __实践__:
 
 __划分数据:__
+
 ```python
 In [27]: data,labes = trees.createDataSet()
 
@@ -175,6 +179,7 @@ Out[86]:
 ```
 
 __选择最好的划分方式:__
+
 ```python
 def chooseBestFeatureToSplit(dataSet):
     '''选择最好的数据划分方式
@@ -233,6 +238,7 @@ def chooseBestFeatureToSplit(dataSet):
 * __实践__:
 
 __最好的特征值:__
+
 ```python
 In [87]: mydata,labels = createDataSet()
 
@@ -250,6 +256,7 @@ Out[89]:
 
 ## 递归构建决策树
 __选择最好的特征:__
+
 ```python
 import operator
 from collections import defaultdict
@@ -273,6 +280,7 @@ def majorityCnt(classList):
 ```
 
 __构建树:__
+
 ```python
 import copy
 def createTree(dataSet,labels):
@@ -323,6 +331,7 @@ def createTree(dataSet,labels):
 * __实践:__
 
 __创建树:__
+
 ```python
 
 In [36]: mydata,labels = createDataSet()
@@ -348,6 +357,7 @@ Out[92]:
 ## 绘制树形图[__有难度__]
 
 __绘制节点:__
+
 ```python
 import matplotlib.pyplot as plt
 decisionNode = dict(boxstyle="sawtooth", fc="0.8")
@@ -380,6 +390,7 @@ def plotNode(plot,nodeTxt, centerPt, parentPt, nodeType):
                             arrowprops=arrow_args)
 ```
 __测试绘制图:__
+
 ```python
 def createPlot_test():
     """测试绘制节点函数.
@@ -400,6 +411,7 @@ def createPlot_test():
 不能显示中文？参考:<http://www.oucb.org/archives/511/>和<http://www.pythoner.com/200.html>
 
 __获取叶子节点数:__
+
 ```python
 def getNumLeafs(myTree):
     """获取叶节点数
@@ -426,6 +438,7 @@ def getNumLeafs(myTree):
 ```
 
 __获取树的深度:__
+
 ```python
 def getTreeDepth(myTree):
     """获取树的层数
@@ -455,6 +468,7 @@ def getTreeDepth(myTree):
     return maxDepth
 ```
 __创建测试数据树:__
+
 ```python
 def retrieveTree(i):
     """根据下标获取数据.
@@ -490,6 +504,7 @@ def retrieveTree(i):
     return listOfTrees[i]
 ```
 __填充中间文本:__
+
 ```python
 def plotMidText(plot,strPt,parentPt,txtString):
     """填充中间的文本.
@@ -512,6 +527,7 @@ def plotMidText(plot,strPt,parentPt,txtString):
     plot.axl.text(xMid,yMid,txtString)
 ```
 __绘制树:__
+
 ```python
 def plotTree(myTree,parentPt,nodeTxt):
     """绘制树形图
@@ -568,6 +584,7 @@ def plotTree(myTree,parentPt,nodeTxt):
     plotTree.yOff = plotTree.yOff + 1.0 / plotTree.totalD
 ```
 __创建图:__
+
 ```python
 def createPlot(inTree):
     
@@ -610,6 +627,7 @@ In [38]: createPlot(mytree)
 
 ## 测试和存储分类器
 __分类器:__
+
 ```python
 def classify(inTree,featLabels,testVec):
     """决策树分类
@@ -659,6 +677,7 @@ In [76]: print res
 不属于
 ```
 __存储决策树:__
+
 ```python
 def storeTree(inTree,filename):
     """序列化存储决策树
@@ -669,6 +688,7 @@ def storeTree(inTree,filename):
         pickle.dump(inTree,fw)
 ```
 __加载决策树:__
+
 ```python
 def grabTree(filename):
     """加载决策树
