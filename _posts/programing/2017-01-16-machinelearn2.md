@@ -85,9 +85,7 @@ def calcShannonEnt(dataSet):
     return shannonEnt
 ```
 
-* __实践:__
-
-__创建数据:__
+### 练习1: `创建数据`
 
 ```python
 def createDataSet():
@@ -161,9 +159,7 @@ def splitDataSet(dataSet,axis,value):
     return retDataSet
 ```
 
-* __实践__:
-
-__划分数据:__
+### 练习2: `划分数据`
 
 ```python
 In [27]: data,labes = trees.createDataSet()
@@ -235,9 +231,7 @@ def chooseBestFeatureToSplit(dataSet):
     return bestFeature
 ```
 
-* __实践__:
-
-__最好的特征值:__
+### 练习3: `寻找最好的特征下标`
 
 ```python
 In [87]: mydata,labels = createDataSet()
@@ -328,9 +322,7 @@ def createTree(dataSet,labels):
     return myTree
 ```
 
-* __实践:__
-
-__创建树:__
+### 练习4: `创建json树`
 
 ```python
 
@@ -612,9 +604,8 @@ def createPlot(inTree):
 
     plt.show()
 ```
-* __实践:__
 
-* __绘制树:__
+### 练习5: `绘制树形图`
 
 ```python
 In [37]: mytree = retrieveTree(1)
@@ -657,9 +648,8 @@ def classify(inTree,featLabels,testVec):
 
     return classLabel
 ```
-* __实践:__
 
-__测试分类器:__
+### 练习6: `测试分类器`
 
 ```python
 In [72]: mydata,lebels = createDataSet()
@@ -701,9 +691,94 @@ def grabTree(filename):
     return tree
 ```
 
-## 示例:
+### 练习7: `示例:决策是否需要佩戴隐形眼镜`
+
+更多实例参考:<http://archive.ics.uci.edu/ml/machine-learning-databases/>
 
 讲解决策树如何预测患者需要佩戴的隐形眼镜类型
+
+__文件:__ lenses.txt
+
+```
+young,myope,no,reduced,no lenses
+young,myope,no,normal,soft
+young,myope,yes,reduced,no lenses
+young,myope,yes,normal,hard
+young,hyper,no,reduced,no lenses
+young,hyper,no,normal,soft
+young,hyper,yes,reduced,no lenses
+young,hyper,yes,normal,hard
+pre,myope,no,reduced,no lenses
+pre,myope,no,normal,soft
+pre,myope,yes,reduced,no lenses
+pre,myope,yes,normal,hard
+pre,hyper,no,reduced,no lenses
+pre,hyper,no,normal,soft
+pre,hyper,yes,reduced,no lenses
+pre,hyper,yes,normal,no lenses
+presbyopic,myope,no,reduced,no lenses
+presbyopic,myope,no,normal,no lenses
+presbyopic,myope,yes,reduced,no lenses
+presbyopic,myope,yes,normal,hard
+presbyopic,hyper,no,reduced,no lenses
+presbyopic,hyper,no,normal,soft
+presbyopic,hyper,yes,reduced,no lenses
+presbyopic,hyper,yes,normal,no lenses
+```
+
+也就是: `最后一列为分类结果`
+
+age  |prescript|astigmatic|tearRate|lenses class
+-----|-----|--|-------|--------
+young|myope|no|reduced|no lenses
+young|myope|no|normal|soft
+young|myope|yes|reduced|no lenses
+young|myope|yes|normal|hard
+young|hyper|no|reduced|no lenses
+young|hyper|no|normal|soft
+young|hyper|yes|reduced|no lenses
+young|hyper|yes|normal|hard
+pre|myope|no|reduced|no lenses
+pre|myope|no|normal|soft
+pre|myope|yes|reduced|no lenses
+pre|myope|yes|normal|hard
+pre|hyper|no|reduced|no lenses
+pre|hyper|no|normal|soft
+pre|hyper|yes|reduced|no lenses
+pre|hyper|yes|normal|no lenses
+presbyopic|myope|no|reduced|no lenses
+presbyopic|myope|no|normal|no lenses
+presbyopic|myope|yes|reduced|no lenses
+presbyopic|myope|yes|normal|hard
+presbyopic|hyper|no|reduced|no lenses
+presbyopic|hyper|no|normal|soft
+presbyopic|hyper|yes|reduced|no lenses
+presbyopic|hyper|yes|normal|no lenses
+
+读取数据并绘图:
+
+```python
+def loadData():
+    filename = 'lenses.txt'
+    with open(filename,'r') as fr:
+        lenses = [ line.strip().split(',') for line in fr.readlines() ]
+
+    labels = ['age','prescript','astigmatic','tearRate']
+
+    lensesTree = createTree(lenses, labels)
+
+    return lensesTree
+
+if __name__ == '__main__':
+    inTree = loadData()
+
+    createPlot(inTree)
+```
+
+决策树:
+
+![决策树练习]({% link assets/programingimg/决策树事例.png %})
+
 
 ## 总结:
 * __优点:__ 计算复杂不高,输出结果易于理解，对中间值的缺失不敏感，可以处理不相关特 征数据。 

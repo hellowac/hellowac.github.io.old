@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "如何阅读一本书之 概述"
+title: "如何阅读一本书 之 概述"
 author: "王超"
 tags:
   - '如何阅读一本书'

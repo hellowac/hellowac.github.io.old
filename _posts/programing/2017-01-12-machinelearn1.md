@@ -42,6 +42,7 @@ show: true
 
 
 ## 创建数据
+
 ```python
 import numpy as np
 
@@ -59,8 +60,8 @@ def createDataSet():
 
 ## 分类器函数
 __将一组数据按照样本集分类__
+
 ```python
-    
 def classify0(inX,dataSet,labels,k):
     """分类器.
 
@@ -124,6 +125,7 @@ def classify0(inX,dataSet,labels,k):
 ```
 
 ### 练习1
+
 ```python
 #常规数据创建
 group,labels = createDataSet()
@@ -134,6 +136,7 @@ category = classify0([1,0],group,labels,3)
 print category
 ```
 __结果:__
+
 ```
 B
 [Finished in 0.4s]
@@ -174,6 +177,7 @@ __公式:__ `newValue = (oldValue-min)/(max-min)`
 0.34617794 | 0.91523088 | 0.89227713 | 3
 
 __归一化函数__:
+
 ```python
 def autoNorm(dataSet):
     """归一化数据函数:
@@ -217,6 +221,7 @@ def autoNorm(dataSet):
 ```
 
 ### 练习2:
+
 ```python
 array = [
     [40920,8.326976 , 0.953952, ],
@@ -238,6 +243,7 @@ print normMat
 ```
 
 __结果:__
+
 ```
 [[ 0.43582641  0.5817826   0.53237967]
  [ 0.          0.48262275  1.        ]
@@ -286,6 +292,7 @@ def plot_test(datingDataMat,datingLabels):
 ```
 
 ### 练习3 分类并绘图
+
 ```python
 def f1():
 
