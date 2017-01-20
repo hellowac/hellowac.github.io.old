@@ -31,6 +31,7 @@ She is `learning` | They are `learning`
 It is `learning` | 
 
 ### Example:
+
 * You are `learning` English right now.
 * He is `learning` English at school
 * They are `learning` English.
@@ -44,6 +45,7 @@ It is `learning` |
 * Example: He + is = He’s
 
 __Example2 :__
+
 * I am eating = `I’m` eating
 * You are eating = `You’re` eating
 * He is eating = `He’s` eating
@@ -59,6 +61,7 @@ __Example2 :__
 ###  Quiz - The Present Continuous Tense
 #### Part A.  
 __Directions:__ Complete each sentence with the correct form of the verb in `the present continuous tense`.(10 points)
+
 1. He ___ ___ the bus `to work` today.(take)
 2. The stores at that mall ___ ___ new employees. (hire)
 3. My mother ___ ____ me next month.(visit)
@@ -72,6 +75,7 @@ __Directions:__ Complete each sentence with the correct form of the verb in `the
 
 #### Part B.  
 __Directions:__ Make each sentence negative in the present continuous tense.(10 points)
+
 1. she ____ _____ there anymore.(work)
 2. I ____ ____ ____ at what you said. (laugh)
 3. They ____ ____ English anymore.(study)
@@ -111,6 +115,7 @@ Nadine is `a good swimmer`. She swims on almost `every day` of the week during `
 Nadine takes good `care of` her body. She exercise `every day` and she eats `healthy food`. She eats `a lot of` fruit and vegetables, and she avoids food that is unhealthy. She never eats `junk food`, but sometimes she has `a hamburger` and `french fries` for lunch. She usually `makes healthy choices` when it comes to eating.
 
 __How much do you remember from the reading? Fill in the blanks.__
+
 * 1A: What `does` Nadine do every day?
 * 1B: She _____.
 * 2A: Does she swim `on the weekends`?
