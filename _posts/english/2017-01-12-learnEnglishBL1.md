@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Blue level 1"
+title: "英语学习 Blue level 1 - Be"
 author: "Pual"
 tags:
   - English

@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Blue level 2"
+title: "英语学习 Blue level 2 - Present Tense Negative"
 author: "Pual"
 tags:
   - English
