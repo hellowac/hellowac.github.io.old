@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "如何阅读一本书 之 分析阅读:第三阶段"
+title: "如何阅读一本书 之 第三层次:第三阶段"
 author: "王超"
 tags:
   - '如何阅读一本书'
