@@ -14,6 +14,8 @@ nav:
   blog:
     name: '日志'
     subnav:
+      diary:
+        name: '日记'
       english:
         name: '英语'
       programing: 
