@@ -16,14 +16,32 @@ show: true
 [{{ site.nav.blog.subnav.programing.name }}]({% link blog/programing/index.md %})/
 {{ page.title }}
 
+参考 [机器学习实战](https://book.douban.com/subject/24703171/)
+
 # K-近邻算法
 ----------------
 **k-近邻算法采用测量不同特征值之间的距离方法进行分类。**
+
+* [工作原理](#工作原理)
+* [一般流程](#一般流程)
+* [欧尔距离公式](#欧尔距离公式)
+* [创建数据](#创建数据)
+* [分类器](#分类器函数)
+* [练习1:创建数据](#练习1)
+* [归一化数值](#归一化数值)
+* [练习2:归一化数据](#练习2)
+* [matplotlib绘图](#matplotlib绘图)
+* [练习3:分类并绘图](#练习3)
+* [总结](#总结)
+
+<span id="工作原理"></span>
 
 ## 工作原理:
 * 存在一个样本数据集合,也称作`训练样本集`,并且 **样本集** 中每个数据都存在`标签`,即我们知道 **样本集** 中每一数据与所属分类的 **应对关系** 。
 * 输入没有标签的 **新数据** 后，将 **新数据** 的每个`特征`与样本集中数据对应的`特征`进行比较，然后算法提取 **样本集** 中特征 最相似 数据(**最近邻**)的`分类标签`。
 * 一般来说，只选择 **样本数据** 集中前`K`个最相似的数据，这就是`k-近邻算法`中k的出处，通常`K`是 **不大于20** 的整数。最后选择`K`个最 **相似数据** 中 **出现次数** 最多的分类，作为新数据的`分类`。
+
+<span id="一般流程"></span>
 
 ## 一般流程:
 1. **收集数据:** 可以使用任何方法.
@@ -33,6 +51,8 @@ show: true
 5. **测试算法:** 计算错误率。
 6. **使用算法:** 首先需要输入 __样本数据__ 和结构化的输出结果，然后运行`k-近邻算法`判定输入数据分别属于哪个`分类`，最后应用对计算出的分类执行后续的处理。
 
+<span id="欧尔距离公式"></span>
+
 ## 欧尔距离公式
 **计算两个向量点xA和xB之间的距离:**
 ![距离公式]({% link /assets/programingimg/点距离公式.png %})
@@ -40,6 +60,8 @@ show: true
 如果数据集存在4个特征值，则点(1, 0, 0, 1)与(7, 6, 9, 4)之间的距离计算为:
 ![距离公式]({% link /assets/programingimg/4点距离公式.png %})
 
+
+<span id="创建数据"></span>
 
 ## 创建数据
 
@@ -57,6 +79,8 @@ def createDataSet():
     
     return group,labels
 ```
+
+<span id="分类器函数"></span>
 
 ## 分类器函数
 __将一组数据按照样本集分类__
@@ -124,6 +148,8 @@ def classify0(inX,dataSet,labels,k):
     return sortedClassCount[0][0]
 ```
 
+<span id="练习1"></span>
+
 ### 练习1
 
 ```python
@@ -141,6 +167,8 @@ __结果:__
 B
 [Finished in 0.4s]
 ```
+
+<span id="归一化数值"></span>
 
 ## 归一化数值
 __将大值取值范围处理为0到1或者-1到1之间。__
@@ -220,6 +248,8 @@ def autoNorm(dataSet):
     return normDataSet,ranges,minVals
 ```
 
+<span id="练习2"></span>
+
 ### 练习2:
 
 ```python
@@ -258,7 +288,10 @@ __结果:__
 [Finished in 0.4s]
 ```
 
+<span id="matplotlib绘图"></span>
+
 ## 使用matplotlib绘图（点散图）
+
 参考:<http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.scatter>
 
 ```python
@@ -290,6 +323,8 @@ def plot_test(datingDataMat,datingLabels):
     #显示
     plt.show()
 ```
+
+<span id="练习3"></span>
 
 ### 练习3 分类并绘图
 
@@ -350,6 +385,8 @@ if __name__ == '__main__':
 __结果如图:__
 
 ![matplotlib绘图]({% link assets/programingimg/k-近邻算法.png %})
+
+<span id="总结"></span>
 
 ## k-近邻算法 总结
 * **优点:** 精度高、对异常值不敏感、无数据输入假定。

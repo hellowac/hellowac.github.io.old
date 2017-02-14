@@ -16,16 +16,39 @@ show: true
 [{{ site.nav.blog.subnav.programing.name }}]({% link blog/programing/index.md %})/
 {{ page.title }}
 
+参考 [机器学习实战](https://book.douban.com/subject/24703171/)
+
 # 决策树
 ----------------
 
+* [一般流程](#一般流程)
+* [信息增益](#信息增益)
+* [计算无序度](#计算无序度)
+* [练习1: 创建数据](#练习1)
+* [划分数据集](#划分数据集)
+* [练习2: 划分数据](#练习2)
+* [练习3: 寻找最好的特征下标](#练习3)
+* [递归构建决策树:json](#递归构建决策树)
+* [练习4: 创建json树](#练习4)
+* [绘制树形图](#绘制树形图)
+* [练习5: 绘制树形图](#练习5)
+* [测试和存储分类器](#测试和存储分类器)
+* [练习6: 测试分类器](#练习6)
+* [练习7: 决策是否需要佩戴隐形眼镜](#练习7)
+* [总结](#总结)
+
+<span id="一般流程"></span>
+
 ## 一般流程:
+
 1. __收集数据:__ 可以使用任何方法。 
 2. __准备数据:__ 树构造算法只适用于标称型数据,因此数值型数据必须离散化。 
 3. __分析数据:__ 可以使用任何方法,构造树完成之后，我们应该检查图形是否符合预期。 
 4. __训练算法:__ 构造树的数据结构。 
 5. __测试算法:__ 使用经验树计算错误率。 
 6. __使用算法:__  此步骤可以适用于任何监督学习算法， 使用决策树可以更好地理解数据的内在含义.
+
+<span id="信息增益"></span>
 
 ## 信息增益:
 
@@ -40,6 +63,8 @@ __参考:__ [香农.熵](https://www.baidu.com/link?url=TcEPIAxlk8pxNioBJXM0r_yf
 ![熵]({% link assets/programingimg/香农.熵.png %})
 
 其中的p(x)是选择该分类的概率.
+
+<span id="计算无序度"></span>
 
 ## 函数:计算给定数据集的香农熵.(计算无序程度)
 ```python
@@ -84,6 +109,8 @@ def calcShannonEnt(dataSet):
 
     return shannonEnt
 ```
+
+<span id="练习1"></span>
 
 ### 练习1: `创建数据`
 
@@ -132,6 +159,8 @@ Out[84]: 1.3709505944546687
 - 从一个数据集中随机抽取子项,度量其被错误分类到其他分组里的概率
 - 参考:<http://blog.verypod.com/cart%E7%AE%97%E6%B3%95%E4%B8%AD%E7%9A%84gini-impurity%EF%BC%88%E4%B8%8D%E7%BA%AF%E5%BA%A6%EF%BC%89/>
 
+<span id="划分数据集"></span>
+
 ## 划分数据集:判断按照那个特征划分数据集是最好的划分方式.
 
 __划分数据:__
@@ -158,6 +187,8 @@ def splitDataSet(dataSet,axis,value):
 
     return retDataSet
 ```
+
+<span id="练习2"></span>
 
 ### 练习2: `划分数据`
 
@@ -231,6 +262,8 @@ def chooseBestFeatureToSplit(dataSet):
     return bestFeature
 ```
 
+<span id="练习3"></span>
+
 ### 练习3: `寻找最好的特征下标`
 
 ```python
@@ -248,7 +281,10 @@ Out[89]:
     [u'否',u'是',u'不属于'],]
 ```
 
+<span id="递归构建决策树"></span>
+
 ## 递归构建决策树
+
 __选择最好的特征:__
 
 ```python
@@ -322,6 +358,8 @@ def createTree(dataSet,labels):
     return myTree
 ```
 
+<span id="练习4"></span>
+
 ### 练习4: `创建json树`
 
 ```python
@@ -345,6 +383,8 @@ Out[92]:
     }
 }
 ```
+
+<span id="绘制树形图"></span>
 
 ## 绘制树形图[__有难度__]
 
@@ -605,6 +645,8 @@ def createPlot(inTree):
     plt.show()
 ```
 
+<span id="练习5"></span>
+
 ### 练习5: `绘制树形图`
 
 ```python
@@ -615,6 +657,8 @@ In [38]: createPlot(mytree)
 是否属于鱼类:
 ![决策树图]({% link assets/programingimg/决策树图.png %})
 ![决策树图]({% link assets/programingimg/决策树图2.png %})
+
+<span id="测试和存储分类器"></span>
 
 ## 测试和存储分类器
 __分类器:__
@@ -648,6 +692,8 @@ def classify(inTree,featLabels,testVec):
 
     return classLabel
 ```
+
+<span id="练习6"></span>
 
 ### 练习6: `测试分类器`
 
@@ -690,6 +736,8 @@ def grabTree(filename):
 
     return tree
 ```
+
+<span id="练习7"></span>
 
 ### 练习7: `示例:决策是否需要佩戴隐形眼镜`
 
@@ -779,6 +827,7 @@ if __name__ == '__main__':
 
 ![决策树练习]({% link assets/programingimg/决策树事例.png %})
 
+<span id="总结"></span>
 
 ## 总结:
 * __优点:__ 计算复杂不高,输出结果易于理解，对中间值的缺失不敏感，可以处理不相关特 征数据。 
