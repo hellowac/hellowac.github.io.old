@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "python - flask小总结"
+title: "python - flask小笔记"
 author: "wangchao"
 tags:
   - python

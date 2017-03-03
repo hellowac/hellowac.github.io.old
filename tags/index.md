@@ -11,7 +11,7 @@ title: "所有的标签"
 ## {{ tag[0] }}
 
 {% for post in tag[1] %}
-* [{{ post.title }}]({{ post.url | absolute_url }}) -- {{ post.date | date_to_long_string }}
+* [{{ post.title }}]({{ post.url }}) -- {{ post.date | date_to_long_string }}
 {% endfor %}
 
 {% endfor %}
