@@ -34,7 +34,7 @@ with_statement | 2.5.0a1 | 2.6 | [PEP 343](https://www.python.org/dev/peps/pep-0
 - print_function print函数
 - unicode_literals Unicode编码
 
-如何使python2代码过渡到python3 : [指南](https://docs.python.org/3/howto/pyporting.html)
+如何使python2代码过渡到python3 : [指南](https://docs.python.org/3/howto/pyporting.html) 和 [python-future](http://python-future.org/imports.html)
 
 ### collections
 
