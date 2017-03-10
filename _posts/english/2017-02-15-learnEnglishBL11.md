@@ -16,7 +16,7 @@ show: true
 [{{ site.nav.blog.subnav.english.name }}]({% link blog/english/index.md %})/
 {{ page.title }}
 
-## BL 10 Prepositions
+## BL 11 Prepositions
 
 __Articles 介词__
 
@@ -24,7 +24,7 @@ Prepositions show location, proximity, and relationships :
 
 - He is standing on a pencil.
 - She is at the beach.
-- The flower is in the glass. 
+- The flower is in the glass.
 
 **in / on / at :**
 
@@ -42,7 +42,7 @@ if somebody ask you a question : where do you work ?
 
 Then you use the proposition “at” : “I work at ____(an name of the company)” -> “I work at Tony’s Pizzeria”
 
-As same a question is “What do you do ?” your answer : “I work at ____(the name of the company)” or “I work in ___(there is an area of the work)”, example, 
+As same a question is “What do you do ?” your answer : “I work at ____(the name of the company)” or “I work in ___(there is an area of the work)”, example,
 
 - if you are a sale person, you can say “I work in sales”
 - if you are a teacher, you can say “I work in education” or “I work at a school”
@@ -106,33 +106,33 @@ In these questions , you can choice to use “to” at the end or not use “to�
 
 if you learning English carefully, you know the word “to” is often used with the verb “go” , for example :
 
-“I have somewhere to go.” 
+“I have somewhere to go.”
 
-“to go” is infinitive , you can follow the preposition “to” -> “I have somewhere to go to”. 
+“to go” is infinitive , you can follow the preposition “to” -> “I have somewhere to go to”.
 
 in negative ,“I don’t have anywhere to go” -> “I don’t have anywhere go go to”.
 
 Finally :
 
-Don’t use the verb “to” preposition with the verb “too” , in this case : 
+Don’t use the verb “to” preposition with the verb “too” , in this case :
 
-“I’m going to the party, Are you going too ?”, 
+“I’m going to the party, Are you going too ?”,
 
 in here , “too” as same as “also”, too = also , It’s a different means
 
 ### continue:
 
-There are hundreds of different prepositions and prepositional phrase. 
+There are hundreds of different prepositions and prepositional phrase.
 
-To learn them all will take years of practice. 
+To learn them all will take years of practice.
 
-The best way to learn them well is by reading books, magazines, and newspapers. 
+The best way to learn them well is by reading books, magazines, and newspapers.
 
-Listening to the radio helps as well. 
+Listening to the radio helps as well.
 
-You can also learn about prepositions in class from a teacher, but it’s important to realize that it requires a lot of practice and memorization. 
+You can also learn about prepositions in class from a teacher, but it’s important to realize that it requires a lot of practice and memorization.
 
-Some common prepositions are listed below in alphabetical order. 
+Some common prepositions are listed below in alphabetical order.
 
 I’ll add more as I think of them.
 
