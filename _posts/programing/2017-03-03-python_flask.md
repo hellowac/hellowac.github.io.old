@@ -221,6 +221,7 @@ flask中使用 [render_template()](http://www.pythondoc.com/flask/api.html#flask
 - 使用包含所有bootstrap文件的基模版.
   + {% raw %}{% extends "bootstrap/base.html" %}{% endraw %}
   + {% raw %}{{ super() }}{% endraw %} 是个好方法喔，修改而不覆盖 block 中的内容.
+- 快速渲染wtf的Form: {% raw %} {% import "bootstrap/wtf.html" as wtf %} {% endraw %}, 参考[WTForms 支持](http://flask-bootstrap-zh.readthedocs.io/zh/latest/forms.html)
 - 更多用法参考官方文档.
 
 <span id="自定义错误页面"></span>
@@ -286,7 +287,7 @@ def index():
 
 # 渲染current_time:
 # 'L' 到 'LLLL' 分别对应不同的复杂度,
-# 'LLL' 根据客户端电脑中的时区和区域设置渲染日期和时间. 
+# 'LLL' 根据客户端电脑中的时区和区域设置渲染日期和时间.
 # format还接受自定义的格式说明符.
 <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
 
@@ -359,7 +360,7 @@ __字段类型__ | __说明__
 [FormField](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.FormField) | 把表单作为字段嵌入另一个表单
 [FieldList](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.FieldList) | 一组指定类型的字段
 [Flags](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.Flags) | Holds a set of boolean flags as attributes.
-[Label](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.Label) | Additional Helper 
+[Label](https://wtforms.readthedocs.io/en/latest/fields.html#wtforms.fields.Label) | Additional Helper
 
 你还可以自定义字段: [custom-fields](https://wtforms.readthedocs.io/en/latest/fields.html#custom-fields)
 
@@ -389,6 +390,8 @@ __验证函数__ | __说明__
 <span id="渲染表单"></span>
 
 __渲染表单：__
+
+参考: [flask-bootstrap-宏](http://flask-bootstrap-zh.readthedocs.io/zh/latest/macros.html)
 
 ```python
 {% raw %}
@@ -465,7 +468,7 @@ def index():
         if old_name is not None and old_name != form.name.data:
             # 调用 flash() 函数，发给客户端的下一个响应中显示一个消息。
             # 仅调用 flash() 函数并不能把消息显示出来，模板还要渲染这些消息.
-            flash('Looks like you have changed your name!') 
+            flash('Looks like you have changed your name!')
             session['name'] = form.name.data
             return redirect(url_for('index'))
     return render_template('index.html',
@@ -541,7 +544,7 @@ class Role(db.Model):
     # db.Column 类构造函数的第一个参数是数据库列和模型属性的类型
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
-    
+
     def __repr__(self):
         return '<Role %r>' % self.name
 
@@ -552,7 +555,7 @@ class User(db.Model):
     # db.Column 类构造函数的第一个参数是数据库列和模型属性的类型
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, index=True)
-    
+
     # 返回一个具有可读性的字符串表示模型，可在调试和测试时使用
     def __repr__(self):
         return '<User %r>' % self.username
@@ -623,7 +626,7 @@ class Role(db.Model):
     # backref 参数向 User 模型中添加一个 role 属性，从而定义反向关系。
     # 这一属性可替代 role_id 访问 Role 模型，此时获取的是模型对象，而不是外键的值。
     users = db.relationship('User', backref='role')
-    
+
 class User(db.Model):
     # ...
     # 定义为外键，建立起关系,
@@ -646,7 +649,7 @@ __选项名__ | __说明__
 [uselist](http://docs.sqlalchemy.org/en/latest/orm/relationship_api.html#sqlalchemy.orm.relationship.params.uselist) | 如果设为 Fales，不使用列表，而使用标量值
 [order_by](http://docs.sqlalchemy.org/en/latest/orm/relationship_api.html#sqlalchemy.orm.relationship.params.order_by) | 指定关系中记录的排序方式
 [secondary](http://docs.sqlalchemy.org/en/latest/orm/relationship_api.html#sqlalchemy.orm.relationship.params.secondary) | 指定多对多关系中关系表的名字
-[secondaryjoin](http://docs.sqlalchemy.org/en/latest/orm/relationship_api.html#sqlalchemy.orm.relationship.params.secondaryjoin) | SQLAlchemy 无法自行决定时，指定多对多关系中的二级联结条件| 
+[secondaryjoin](http://docs.sqlalchemy.org/en/latest/orm/relationship_api.html#sqlalchemy.orm.relationship.params.secondaryjoin) | SQLAlchemy 无法自行决定时，指定多对多关系中的二级联结条件|
 
 其他关系:
 
@@ -694,7 +697,7 @@ __数据库操作:__
 
 # 删除行
 >>> db.session.delete(mod_role)   #删除与插入和更新一样，提交数据库会话后才会执行。
->>> db.session.commit() 
+>>> db.session.commit()
 ```
 
 <span id="数据库查询"></span>
@@ -1150,16 +1153,3 @@ __创建数据库:__
 # 创建数据表或者升级到最新修订版本
 (venv) $ python manage.py db upgrade
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
