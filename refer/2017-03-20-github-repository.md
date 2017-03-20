@@ -92,3 +92,4 @@ show: true
 - [architect](https://github.com/pages-themes/architect), GitHub Pages 主题
 - [Alfred](https://github.com/Alfred-Sun/Alfred-Sun.github.io), 一个网友博客
 - [huxpro](https://github.com/Huxpro/huxpro.github.io), 一个网友博客
+- [gold-miner](https://github.com/xitu/gold-miner),掘金翻译计划，翻译掘金上优质的英文文章
