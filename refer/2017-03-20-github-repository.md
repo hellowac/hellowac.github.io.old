@@ -27,6 +27,7 @@ show: true
 - [cherrypy](https://github.com/cherrypy/cherrypy) , 一个和flask类似轻WEB框架
 - [flask-admin](https://github.com/flask-admin/flask-admin)
 - [flask-mail](https://github.com/mattupstate/flask-mail)
+- [flask-twisted](https://github.com/cravler/flask-twisted)
 - [flask-Moment](https://github.com/miguelgrinberg/Flask-Moment), flask 的一个 操作时间的插件
 - [flask-script](https://github.com/smurfix/flask-script), flask命令行工具的插件
 - [core-scrapy](https://github.com/yidao620c/core-scrapy), Scrapy框架研究
@@ -53,6 +54,8 @@ show: true
 - [Mastering Flask](https://github.com/PacktPublishing/Mastering-Flask), 书籍 源码
 - [pyDataScienceToolkits-Base](https://github.com/jasonding1354/pyDataScienceToolkits_Base), python 数据工具集 介绍，NumPy、Pandas、Matplotlib、Scikit-learn等等
 - [matplotlib](https://github.com/matplotlib/matplotlib), python 会图库 matplotlib
+- [gevent](https://github.com/gevent/gevent), 协程库
+- [distribute_crawler](https://github.com/gnemoug/distribute_crawler), 一个分布式爬虫
 
 **DataBase**
 
@@ -80,10 +83,18 @@ show: true
 - [foundation-site](https://github.com/zurb/foundation-sites), 前端流行框架集合
 - [Skeleton](https://github.com/dhg/Skeleton), 一个前端开发工具
 
+**安全工具**
+
+- [androguard](https://github.com/androguard/androguard), andro guard 破解工具 python版
+- [doom](https://github.com/lietdai/doom), 分布式漏洞扫描工具
+- [mitmproxy](https://github.com/mitmproxy/mitmproxy), 代理调试工具
+- [metasploit](https://github.com/rapid7/metasploit-framework), 渗透测试平台
+- [wydomain](https://github.com/ring04h/wydomain), 乌云漏洞收集平台
+
 **其他**
 
 - [algorithm](https://github.com/yidao620c/core-algorithm), 《算法导论》(第3版) 算法集锦
-- [babel-handbook](https://github.com/thejameskyle/babel-handbook), [babel](https://www.baidu.com/link?url=uVnEAkBogtUOKxLVhXfMRe-UFwCwZhIoJgTzXzs5wQ_&wd=&eqid=87092ba400295d730000000258ceb3f7):下一代 JavaScript 语法的编译器,
+- [babel-handbook](https://github.com/thejameskyle/babel-handbook), [babel](http://babeljs.cn/):下一代 JavaScript 语法的编译器,
 - [tianshu](https://github.com/tianmajs/tianshu), 一个 markkdown工具
 - [ResumeSample](https://github.com/geekcompany/ResumeSample), 建立模板
 - [iina](https://github.com/lhc70000/iina), IINA , mac os 平台的一个视频解码器
@@ -93,3 +104,7 @@ show: true
 - [Alfred](https://github.com/Alfred-Sun/Alfred-Sun.github.io), 一个网友博客
 - [huxpro](https://github.com/Huxpro/huxpro.github.io), 一个网友博客
 - [gold-miner](https://github.com/xitu/gold-miner),掘金翻译计划，翻译掘金上优质的英文文章
+- [code](https://github.com/douban/code), 豆瓣开源项目
+- [cachebrowser](https://github.com/CacheBrowser/cachebrowser), CDN 缓存上网插件， 参考：<http://www.williamlong.info/archives/4426.html>
+- [libevent](https://github.com/libevent/libevent), C语言开发，开源网络库
+- [google-hosts](https://github.com/txthinking/google-hosts), google hosts
