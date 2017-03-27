@@ -39,28 +39,28 @@ How		| method / quality
 
 Present tense questions with the verb `BE`
 
-1. Who ____ I ?  (am) -> You’re Paul.
-2. Who ____ they ? (are) -> They’re puppets.
-3. Who ____ he ? (is) -> He is a man.
-4. How many balls ____ there ? (are) -> There are three balls.
-5. where ____ we ? (are) -> We’re on Argyle Street.
-6. Where ____ she ? (is) -> She’s on the train.
-7. How close ____ the trains to each other ? (are) -> They’re just a few feet apart.
-8. What kind of building ____ this ? (is) -> It’s a baseball stadium.
-9. What ____ the name of the hotel ? (is) -> It’s the Palmer House.
-10. What floor ____ we on ? (are) -> We’re on the fourth floor.
-11. How high up ____ we ? (are) -> We’re very high.
-12. What ____ this ? (is) -> It’s a type of sculpture. It’s also a fountain
-13. Why ____ it here ? (is) -> It’s for the public to enjoy.
-14. What ____ they ? (are) -> They’re pigeons.
-15. Why ____ they here ? (are) -> They’re trying to keep warm.
-16. How long ____ this bridge ? (is) -> It’s almost 100 yards long.
-17. Where ____ it ? (is) -> It’s above the highway.
-18. Why ____ they angry at this man ? (are) ->Their car was towed.
-19. How old ____ these building ? (are) -> They’re very old.
-20. Where ____ Chicago ? (is) -> It’s in Illinois.
-21. On which of the five Great Lakes ____ Chicago located ? (is) -> It’s located on Lake Michigan.
-22. Which website ___ this ? (is) -> [LearnAmericanEnglishOnline.com](http://LearnAmericanEnglishOnline.com)
+- Who ____ I ?  (am) -> You’re Paul.
+- Who ____ they ? (are) -> They’re puppets.
+- Who ____ he ? (is) -> He is a man.
+- How many balls ____ there ? (are) -> There are three balls.
+- where ____ we ? (are) -> We’re on Argyle Street.
+- Where ____ she ? (is) -> She’s on the train.
+- How close ____ the trains to each other ? (are) -> They’re just a few feet apart.
+- What kind of building ____ this ? (is) -> It’s a baseball stadium.
+- What ____ the name of the hotel ? (is) -> It’s the Palmer House.
+- What floor ____ we on ? (are) -> We’re on the fourth floor.
+- How high up ____ we ? (are) -> We’re very high.
+- What ____ this ? (is) -> It’s a type of sculpture. It’s also a fountain
+- Why ____ it here ? (is) -> It’s for the public to enjoy.
+- What ____ they ? (are) -> They’re pigeons.
+- Why ____ they here ? (are) -> They’re trying to keep warm.
+- How long ____ this bridge ? (is) -> It’s almost 100 yards long.
+- Where ____ it ? (is) -> It’s above the highway.
+- Why ____ they angry at this man ? (are) ->Their car was towed.
+- How old ____ these building ? (are) -> They’re very old.
+- Where ____ Chicago ? (is) -> It’s in Illinois.
+- On which of the five Great Lakes ____ Chicago located ? (is) -> It’s located on Lake Michigan.
+- Which website ___ this ? (is) -> [LearnAmericanEnglishOnline.com](http://LearnAmericanEnglishOnline.com)
 
 **Example:**
 
@@ -83,14 +83,14 @@ Present tense questions with the verb `BE`
 
 **Practice:**
 
-1. ____ are you ? (location / place)
-2. ____ are those people? (people)
-3. ____ is the time? (fact / truth / information)
-4. ____ is he upset ? (reason)
-5. ____ is the party ? (date / time)
-6. ____ is the weather today ? (quality)
-7. ____ coffee is there ? (amount)
-8. ____ oranges are on the table ? (amount)
+- ____ are you ? (location / place)
+- ____ are those people? (people)
+- ____ is the time? (fact / truth / information)
+- ____ is he upset ? (reason)
+- ____ is the party ? (date / time)
+- ____ is the weather today ? (quality)
+- ____ coffee is there ? (amount)
+- ____ oranges are on the table ? (amount)
 
 (answers: 1. Where; 2. Who; 3. What; 4. Why; 5. When; 6. How; 7. How much; 8. How many)
 
@@ -113,9 +113,9 @@ All religions teach people to live good lives, honor(尊敬) the family, help th
 
 **How much do you remember from the reading ? Fill in the blanks.**
 
-1. People who follow the teaching of Jesus are called  ____.
-2. People who follow _____ are Muslim.
-3. People who _____ in Buddhism are Buddhists.
-4. A person who practices ____ is Hindu.
+- 1.People who follow the teaching of Jesus are called  ____.
+- 2.People who follow _____ are Muslim.
+- 3.People who _____ in Buddhism are Buddhists.
+- 4.A person who practices ____ is Hindu.
 
 (**Answers**: 1. Christians; 2. Islam; 3. believe; 4. Hinduism)
