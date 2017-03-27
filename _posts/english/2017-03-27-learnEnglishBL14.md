@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Blue level 13 - Possessive Adjectives"
+title: "英语学习 Blue level 14 - Possessive Adjectives"
 author: "Pual"
 tags:
   - English
@@ -76,7 +76,7 @@ Where are their coats? / Where are the children’s coats?
 - 6.She wants to see ____ father.
 - 7.It has ____ own food.
 - 8.___ name is (your name here).
-- 9.___ name is John.
+- 9.___ name is JTkohn.
 - 10.___ name is Julia.
 
 _The answers are below_ :
