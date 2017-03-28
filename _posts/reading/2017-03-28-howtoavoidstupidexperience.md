@@ -4,10 +4,7 @@ layout: post
 title: "文章 - 如何避免愚蠢的见识"
 author: "王超"
 tags:
-  - '沟通的艺术'
-  - 'Book'
-  - '沟通'
-  - '关系'
+  - '文章'
 category:
   - 'Reading book'
 show: true
