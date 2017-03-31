@@ -70,7 +70,7 @@ show: true
 - [docker](https://github.com/docker/docker), docker , 系统级的虚拟机.
 - [docker-practice](https://github.com/yeasy/docker_practice), 开源书籍，Docker — 从入门到实践
 
-**前端**
+**前端和JS**
 
 - [can-i-use](https://github.com/Fyrd/caniuse), 一个校验前端 特性 当前是否可用的网站
 - [select2](https://github.com/select2/select2), 一个前端选择框架
@@ -83,6 +83,8 @@ show: true
 - [geckodriver](https://github.com/mozilla/geckodriver), firefox 官方的 webDriver.
 - [foundation-site](https://github.com/zurb/foundation-sites), 前端流行框架集合
 - [Skeleton](https://github.com/dhg/Skeleton), 一个前端开发工具
+- [NodeBB](https://github.com/NodeBB/NodeBB), 一个NODEjs的开源论坛网站， 比如[python-cn.org](http://python-cn.org/)就使用了它.
+- [NodeBB-China](https://github.com/NodeBB-China/NodeBB-China),NodeBB中国：专注解决NodeBB的使用问题
 
 **安全工具**
 
