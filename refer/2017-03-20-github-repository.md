@@ -56,6 +56,7 @@ show: true
 - [matplotlib](https://github.com/matplotlib/matplotlib), python 会图库 matplotlib
 - [gevent](https://github.com/gevent/gevent), 协程库
 - [distribute_crawler](https://github.com/gnemoug/distribute_crawler), 一个分布式爬虫
+- [meld](https://github.com/yousseb/meld), 一个python写的，文件对比软件
 
 **DataBase**
 
