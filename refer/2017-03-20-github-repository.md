@@ -57,6 +57,7 @@ show: true
 - [gevent](https://github.com/gevent/gevent), 协程库
 - [distribute_crawler](https://github.com/gnemoug/distribute_crawler), 一个分布式爬虫
 - [meld](https://github.com/yousseb/meld), 一个python写的，文件对比软件
+- [docopt](https://github.com/docopt/docopt), 一个 比 argparse 标准库更好用的 命令行解析器。
 
 **DataBase**
 
