@@ -20,6 +20,7 @@ show: true
 **python**
 
 - [cpython](https://github.com/python/cpython), python 项目
+- [pep-8](https://github.com/amontalenti/elements-of-python-style), python ， pep8 风格编程 指南
 - [ipython](https://github.com/ipython/ipython)
 - [jinja2](https://github.com/pallets/jinja), jinja2 模板项目
 - [textmate-bundle](https://github.com/textmate/python.tmbundle), TextMate编辑器的bundle的python支持
