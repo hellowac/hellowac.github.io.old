@@ -59,9 +59,14 @@ show: true
 - [distribute_crawler](https://github.com/gnemoug/distribute_crawler), 一个分布式爬虫
 - [meld](https://github.com/yousseb/meld), 一个python写的，文件对比软件
 - [docopt](https://github.com/docopt/docopt), 一个 比 argparse 标准库更好用的 命令行解析器。
+- [kafka](https://github.com/Parsely/pykafka) , 分布式消息系统, 开源在apache。
+- [Minos](https://github.com/phith0n/Minos), 一个基于Tornado/mongodb/redis的社区系统。
+- [xvfbwrapper](https://github.com/cgoldberg/xvfbwrapper), python 的 xvfb 包装.
+
 
 **DataBase**
 
+- [mongo](https://github.com/mongodb/mongo), Nosql 数据库
 - [mongo-cookbook](https://github.com/mongodb/cookbook), mongodb官方 cookbook
 
 **shell**
@@ -71,6 +76,7 @@ show: true
 - [tunasync](https://github.com/tuna/tunasync),清华大学镜像管理软件
 - [docker](https://github.com/docker/docker), docker , 系统级的虚拟机.
 - [docker-practice](https://github.com/yeasy/docker_practice), 开源书籍，Docker — 从入门到实践
+- [xvfb-run](https://github.com/revnode/xvfb-run), xvfb 的 虚拟 X window 接口.
 
 **前端和JS**
 
