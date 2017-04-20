@@ -16,7 +16,7 @@ show: true
 [{{ site.nav.blog.subnav.english.name }}]({% link blog/english/index.md %})/
 {{ page.title }}
 
-## Possessive Adjectives
+## Possessive Adjectives ： 所有格形容词：他的， 它的, 她的,
 
 形容词性物主代词,物主形容词
 

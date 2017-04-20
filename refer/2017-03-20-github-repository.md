@@ -59,7 +59,7 @@ show: true
 - [distribute_crawler](https://github.com/gnemoug/distribute_crawler), 一个分布式爬虫
 - [meld](https://github.com/yousseb/meld), 一个python写的，文件对比软件
 - [docopt](https://github.com/docopt/docopt), 一个 比 argparse 标准库更好用的 命令行解析器。
-- [kafka](https://github.com/Parsely/pykafka) , 分布式消息系统, 开源在apache。
+- [pykafka](https://github.com/Parsely/pykafka) , kafka分布式消息系统的 python客户端接口， 开源在apache。 参考相关文章[Kafka 背景及架构介绍](https://juejin.im/entry/5858f8761b69e60056f6a765)
 - [Minos](https://github.com/phith0n/Minos), 一个基于Tornado/mongodb/redis的社区系统。
 - [xvfbwrapper](https://github.com/cgoldberg/xvfbwrapper), python 的 xvfb 包装.
 
