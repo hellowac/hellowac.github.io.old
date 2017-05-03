@@ -103,6 +103,9 @@ def search(name):
                 searched.append(person)    # 将这个人标记为检查过
     return False  # 如果到达了这里，就说明队列中没人符合条件
 
+def person_is_seller(name):
+    return name.endswith('m')  # 仅仅为了说明.
+
 search("you")
 ```
 
