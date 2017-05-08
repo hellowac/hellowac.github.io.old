@@ -520,6 +520,7 @@ In [48]: dis.dis('s[a] += b')
   - `key` ： 一个只有一个参数的函数，这个函数会被用在序列里的每一个元素上，所产生的结果将是排序算法依赖的对比关键字。 如：`key=str.lower` 、`key=len`
   - `reverse` ：如果被设定为 True，被排序的序列里的元素会以降序输出（也就是说把最大值当作最小值来排序）。这个参数的默认值是 False。
   - 【可选参数 `key` 还可以在内置函数 `min()` 和 `max()` 中起作用。另外，还有些标准库里的函数也接受这个参数，像 `itertools.groupby()` 和 `heapq.nlargest()` 等。】
+  - python中的连贯接口: 返回自身.参考<https://en.wikipedia.org/wiki/Fluent_interface>
 
 ```python
 In [53]: fruits = ['grape', 'raspberry', 'apple', 'banana']
@@ -529,14 +530,152 @@ In [54]: fruits.sort()   # 就地排序
 In [55]: fruits
 Out[55]: ['apple', 'banana', 'grape', 'raspberry']
 
-In [56]: sorted(fruits,key=len)   # 根据长度排序
+In [56]: sorted(fruits,key=len)   # 根据长度排序, 并返回复制过的列表.
 Out[56]: ['apple', 'grape', 'banana', 'raspberry']
 
 In [58]: sorted(fruits,key=len,reverse=True)  # 从大到小.
 Out[58]: ['raspberry', 'banana', 'apple', 'grape']
 
-In [61]: fruits.sort(key=len,reverse=True)  # 就地排序，并且根据字符长度，以及从大到小
+In [61]: fruits.sort(key=len,reverse=True)  # 就地排序，并且根据字符长度，以及从大到小，返回值为None被解释器忽略.
 
 In [62]: fruits
 Out[62]: ['raspberry', 'banana', 'apple', 'grape']
 ```
+
+**使用`bisect`管理已排序的序列**
+
+- 可以查找指定的值在序列中应该插入的位置。
+- `bisect.bisect` 是 `bisect.bisect_right` 的别名，另一个是 `bisect.bisect_left` ， 他们分别将相等的值插入前面还是后面.
+  - 他们都有两个参数可以指定查找的范围，`lo` 和 `hi` , `lo`(low) 默认值是 `0` , `hi`(high) 默认值是 序列的长度.
+- `bisect.insort` 可以在保持排序的基础上插入新值.
+  - 同样也有一个 `bisect.insort_left` 背后用的就是`bisect.bisect_left` .
+  - 同样也有`lo` 和 `hi` 两个参数，指定插入范围.
+- `bisect` 模块的操作无论是列表还是元组，都有效.
+
+```python
+In [3]: a = [1,3,4,5,6]
+
+In [4]: b = [2,5,9]
+
+In [5]: position = bisect.bisect(a, b[2])   # 查找9应该插入的位置.[相等的话右边]
+
+In [6]: position
+Out[6]: 5
+
+In [10]: bisect.bisect_left(a, 3)   # 查找相等的值应该插入的位置，[相等的话左边]
+Out[10]: 1 # 位置下标为1
+
+In [11]: bisect.insort(a,7)   # 保持排序并插入值
+
+In [12]: a
+Out[12]: [1, 3, 4, 5, 6, 7]
+
+In [13]: bisect.insort_left(a, 3.0)  # 相等则保持排序并插入左边.
+
+In [14]: a
+Out[14]: [1, 3.0, 3, 4, 5, 6, 7] # 3 的左边.
+```
+
+**数组：**
+
+如果需要一个只包含数字的列表，那么 `array.array` 比 `list` 更高效。数组支持所有跟可变序列有关的操作，包括 `.pop`、`.insert` 和 `.extend`。另外，数组还提供从文件读取和存入文件的更快的方法，如 `.frombytes` 和 `.tofile`。
+
+
+```python
+In [1]: from array import array
+
+In [2]: from random import  random
+
+In [4]: floats = array('d', (random() for i in range(10**7)))  # 建立一个双精度浮点数组,并传入可迭代对象初始化.
+
+In [5]: floats[-1]
+Out[5]: 0.5757759714432188
+
+In [6]: fp = open('floats.bin','wb')
+
+In [7]: floats.tofile(fp)  # 把数组存入一个二进制文件里。
+
+In [8]: fp.close()
+
+In [9]: floats2 = array('d')  # 新建一个空数组
+
+In [10]: fp = open('floats.bin','rb')
+
+In [11]: floats2.fromfile(fp,10**7)  # 把 1000 万个浮点数从二进制文件里读取出来。
+
+In [12]: fp.close()
+
+In [14]: floats2[-1]  # 查看最后一个元素
+Out[14]: 0.5757759714432188
+
+In [15]: floats2 == floats  # 检查两个数组的内容是不是完全一样。
+Out[15]: True
+```
+
+和列表的方法对比：
+
+**方法** | **列表** | **数组** | **说明**
+---------|---------|----------|--------
+`s.__add(s2)__` | • | • | `s + s2`，拼接
+`s.__iadd(s2)__` | • | • | `s += s2`，就地拼接
+`s.append(e)` |  • | • | 在尾部添加一个元素
+`s.count(e)` | • | • | `s` 中 `e` 出现的次数
+`s.__contains__(e)` | •| • | `s` 是否含有 `e`
+`s.index(e)` | • | • | 找到 `e` 在序列中第一次出现的位置
+`s.insert(p, e)` | • | • | 在位于 `p` 的元素之前插入元素 `e`
+`s.__iter__()` | • | • | 返回迭代器
+`s.__len__()` | • | •  | `len(s)`，序列的长度
+`s.__mul__(n)` | • | • | `s * n`，重复拼接
+`s.__imul__(n)` | • | • | `s *= n`，就地重复拼接
+`s.__rmul__(n)` | • | • | `n * s`，反向重复拼接*
+`s.__setitem__(p, e)` | • | • | `s[p] = e`，把位于 `p` 位置的元素替换成 `e`
+`s.__getitem__(p)` | • | • | `s[p]`，读取位置 `p` 的元素
+`s.__delitem__(p)` | • | • | 删除位置 `p` 的元素
+`s.pop([p])` | • | • | 删除位于 `p` 的值并返回这个值，`p` 的默认值是最后一个元素的位置
+`s.remove(e)` | • | • | 删除序列里第一次出现的 `e` 元素
+`s.reverse()` | • | • | 就地调转序列中元素的位置
+`s.extend(it)` | • | • | 将可迭代对象 `it` 里的元素添加到尾部
+`s.__reversed__()` | • | | 返回一个从尾部开始扫描元素的迭代器
+`s.sort([key], [revers])` | • |  | 就地排序序列，可选参数有 `key` 和 `reverse`
+`s.copy()` | • | | 对列表浅复制
+`s.clear()`  |• | | 删除所有元素
+`s.__copy__()` | | • | 对 `copy.copy` 的支持
+`s.__deepcopy__()` | | • | 对 `copy.deepcopy` 的支持
+`s.byteswap` | | • | 翻转数组内每个元素的字节序列，转换字节序
+`s.itemsize` | | • | 数组中每个元素的长度是几个字节
+`s.tobytes()` | | • | 把所有元素的机器值用 `bytes` 对象的形式返回
+`s.tofile(f)` | | • | 把所有元素以机器值的形式写入一个文件
+`s.tolist()` | | • | 把数组转换成列表，列表里的元素类型是数字对象
+`s.typecode` | | • | 返回只有一个字符的字符串，代表数组元素在 C 语言中的类型
+`s.frombytes(b)` | | • | 将压缩成机器值的字节序列读出来添加到尾部
+`s.fromfile(f, n)` | | • | 将二进制文件 `f` 内含有机器值读出来添加到尾部，最多添加 `n` 项
+`s.fromlist(l)` | | • | 将列表里的元素添加到尾部，如果其中任何一个元素导致了 `TypeError` 异常，那么所有的添加都会取消
+
+参考官方文档： [array - 高效的数值数组](http://python.usyiyi.cn/translate/python_352/library/array.html)
+
+**内存视图：memoryview**
+
+二进制序列类型 ， 参考 [字节，bytearray，memoryview](http://python.usyiyi.cn/translate/python_352/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview)
+
+**numpy和scipy**
+
+`NumPy` 和 `SciPy` 提供了高阶数组和矩阵操作, `SciPy` 是基于 `NumPy` 的另一个库，它提供了很多跟`科学计算`有关的算法，专为`线性代数`、`数值积分`和`统计学`而设计。
+
+`NumPy` 和 `SciPy` 都是异常强大的库，也是其他一些很有用的工具的基石。`Pandas` 和 [Blaze](http://blaze.pydata.org/) 数据分析库就以它们为基础，提供了高效的且能存储非数值类数据的数组类型，和读写常见数据文件格式（例如 csv、xls、SQL 转储和 HDF5）的功能。
+
+详细参考：[scipy.org](https://www.scipy.org/)
+
+**双向队列和其他形式的队列**
+
+- **[collections.deque](http://python.usyiyi.cn/documents/python_352/library/collections.html#collections.deque):**
+  - 线程安全、两端添加或者删除元素、指定队列大小、
+  - `extendleft(iter)` 方法会把迭代器里的元素逐个添加到双向队列的左边，因此迭代器里的元素会逆序出现在队列里。
+- **[queue](http://python.usyiyi.cn/translate/python_352/library/queue.html)：**
+  - `Queue` 、`LifoQueue` 、 `PriorityQueue` 类。
+  - 都有一个可选参数 `maxsize`，接收正整数作为输入值，用来限定队列的大小。但是在满员的时候，这些类不会扔掉旧的元素来腾出位置。相反，如果队列满了，它就会被锁住，直到另外的线程移除了某个元素而腾出了位置。这一特性让这些类很适合用来控制活跃线程的数量。
+- **[multiprocessing](http://python.usyiyi.cn/translate/python_352/library/multiprocessing.html)**
+  - 实现了自己的 `Queue`，它跟 `queue.Queue` 类似，是设计给进程间通信用的。同时还有一个专门的 `multiprocessing.JoinableQueue` 类型，可以让任务管理变得更方便。
+- **[asyncio](http://python.usyiyi.cn/documents/python_352/library/asyncio.html):**
+  - Python 3.4 新提供的包，里面有 `Queue`、`LifoQueu`e、`PriorityQueue` 和 `JoinableQueue`，这些类受到 `queue` 和 `multiprocessing` 模块的影响，但是为异步编程里的任务管理提供了专门的便利。
+- **[heapq](http://python.usyiyi.cn/documents/python_352/library/heapq.html):**
+  - 跟上面三个模块不同的是，`heapq` 没有队列类，而是提供了 `heappush` 和 `heappop` 方法，让用户可以把可变序列当作堆队列或者优先队列来使用。
