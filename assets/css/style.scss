@@ -393,7 +393,8 @@ th {
 
 .highlight .err {
   color: #a61717;
-  background-color: #e3d2d2; }
+  // background-color: #e3d2d2;
+  }
 
 .highlight .gd {
   color: #000000;
@@ -689,9 +690,13 @@ code, pre {
   color: #222; }
 
 code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   padding: 0 3px;
-  /*background-color: #f2f8fc;*/
-  border: solid 1px #dbe7f3; }
+  // background-color: #f2f8fc;
+  // background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+  // border: solid 1px #dbe7f3;
+ }
 
 pre {
   padding: 20px;
@@ -726,7 +731,8 @@ th {
 
 td {
   font-weight: 300;
-  text-align: center;
+  padding: 6px 13px;
+  // text-align: left;
   border: 1px solid #ebebeb; }
 
 form {
