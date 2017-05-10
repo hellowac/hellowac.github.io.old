@@ -31,6 +31,7 @@ show: true
   - [Counter](#Counter)
   - [UserDict](#UserDict)
   - [MappingProxyType](#MappingProxyType)
+- [代码片段](#代码片段)
 
 **字典和集合:**
 
@@ -358,3 +359,27 @@ Python 源码 [dictobject.c 模块](http://hg.python.org/cpython/file/tip/Object
 - **可以很高效地判断元素是否存在于某个集合。**
 - **元素的次序取决于被添加到集合里的次序。**
 - **往集合里添加元素，可能会改变集合里已有元素的次序。**
+
+<span id="代码片段"></span>
+
+**代码片段**
+
+```python
+# 将string转换为2进制
+def bits1(st):
+    return ''.join(format(ord(x), 'b') for x in st)
+
+# 将int转换为2进制
+def bits(it):
+    return format(it, 'b')
+
+# 比较散列值二进制之间的差异
+In [12]: k1 = bits(hash('Monty'))
+In [14]: k2 = bits(hash('Money'))
+In [16]: diff = ('^ '[a==b] for a,b in zip(k1,k2))
+In [17]: print(k1);print(k2);print(''.join(diff))
+10111010111001101110011110000101110011010010010100110001001101
+-1110011110101001000110101110100001010001011101100010010111100
+^^  ^  ^  ^^  ^  ^^ ^ ^ ^^^^   ^^^^  ^ ^^  ^^^^   ^   ^^^^   ^
+
+```
