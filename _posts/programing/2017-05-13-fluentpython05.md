@@ -445,8 +445,6 @@ Out[62]: 'The-time-has-come'
   - `functools.partialmethod` 函数（Python 3.4 新增）的作用与 partial 一样，不过是用于处理方法的。
   - `functools.lru_cache` : 会做备忘（memoization）,一种自动优化措施，它会存储耗时的函数调用结果，避免重新计算。
 
-
-
 ```python
 In [72]: from operator import mul
 
@@ -496,3 +494,13 @@ Out[90]: ('img',)
 In [91]: picture.keywords
 Out[91]: {'cls': 'pic-frame'}
 ```
+
+- **延伸阅读** <span id="延伸阅读"></span>
+  - [3.2. The standard type hierarchy](https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy), 对 7 种可调用类型和其他所有内置类型做了介绍。
+  - [PEP 3102—Keyword-Only Arguments](https://www.python.org/dev/peps/pep-3102/) 和 [PEP 3107—Function Annotations](https://www.python.org/dev/peps/pep-3107/), 讨论了 Python 3 专有特性。
+  - [What are good uses for Python3's‘Function Annotations’](http://stackoverflow.com/questions/3038033/what-are-good-uses-for-python3s-function-annotations) 和 [What good are Python function annotations?](http://stackoverflow.com/questions/13784713/what-good-are-python-function-annotations) , 进一步了解目前对注解的使用.
+  - [PEP 362—Function Signature Object](https://www.python.org/dev/peps/pep-0362/) , 帮助了解 `inspect` 实现细节
+  - [Python Functional Programming HOWTO](http://docs.python.org/3/howto/functional.html), 对 Python 函数式编程做了很好的介绍
+  - [fn.py](https://github.com/kachayev/fn.py), 为 Python 2 和 Python 3 提供函数式编程支持的包.提供了 Python“所缺少的函数式特性”。这个包提供的 `@recur.tco` 装饰器为 Python 中的无限递归实现了尾调用优化。此外，`fn.py` 还提供了很多其他函数、数据结构和诀窍。
+  - [Python: Why is functools.partial necessary?](http://stackoverflow.com/questions/3252228/python-why-is-functools-partial-necessary), 详实（而有趣）的回答.
+  - Bobo 框架。[Introduction](http://bobo.readthedocs.io/en/latest/)， 或许是第一个称得上是面向对象的 Web 框架。Phillip J. Eby 在评论中提到了 Bobo 的一些[早期历史](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=94006)
