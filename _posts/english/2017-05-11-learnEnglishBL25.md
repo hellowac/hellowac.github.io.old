@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Blue level 25 - want "
+title: "英语学习 Blue level 25 - want: Present Tense "
 author: "Pual"
 tags:
   - English

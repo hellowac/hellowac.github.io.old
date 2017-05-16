@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Blue level 26 - want "
+title: "英语学习 Blue level 26 - want: Past Tense"
 author: "Pual"
 tags:
   - English
