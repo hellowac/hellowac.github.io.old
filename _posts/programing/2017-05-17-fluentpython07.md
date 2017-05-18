@@ -36,7 +36,7 @@ show: true
     - 装饰器通常在一个模块中定义，然后应用到其他模块中的函数上。
     - 大多数装饰器会在内部定义一个函数，然后将其返回。
 
-使用装饰器改善 [策略模式]({% link _posts/proraming/2017-05-17-fluentpython06.md %})：
+使用装饰器改善 [策略模式]({% link _posts/programing/2017-05-16-fluentpython06.md %})：
 
 ```python
 promos = []  # 初始化注册列表
