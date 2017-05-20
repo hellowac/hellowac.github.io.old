@@ -24,6 +24,9 @@ show: true
 - [对象复制](#对象复制)
 - [参数作为引用](#参数作为引用)
 - [del和对象回收](#del和对象回收)
+- [弱引用](#弱引用)
+- [其他](#其他)
+- [延伸阅读](#延伸阅读)
 
 - **变量**
   - 变量是一个 `对象` 的 `标识` ，不是 `副本`.
@@ -282,7 +285,7 @@ class TwilightBus:
         self.passengers.remove(name)  # 会反应到传入的参数的对象上.
 ```
 
-- **del和对象回收**
+- **del和对象回收** <span id="del和对象回收"></span>
   - 对象绝不会自行销毁；然而，无法得到对象时，可能会被当作垃圾回收。
   - del 语句删除名称，而不是对象。
     - del 命令可能会导致对象被当作垃圾回收，但是仅当删除的变量保存的是对象的最后一个引用，或者无法得到对象时。
@@ -325,11 +328,242 @@ In [175]: ender.alive  # ender 为 弱引用， 不在 计数 范围内.
 Out[175]: False
 ```
 
-- **弱引用**
+- **弱引用** <span id="弱引用"></span>
   - 弱引用不会增加对象的引用数量。引用的目标对象称为 `所指对象` （referent）。因此，弱引用不会妨碍所指对象被当作垃圾回收。
   - 弱引用在缓存应用中很有用，因为不想仅因为被缓存引用着而始终保存缓存对象。
-  - 使用 weakref.ref 实例可以获取所指对象。如果对象存在，调用弱引用可以获取对象；否则返回 None。
+  - 使用 `weakref.ref` 实例可以获取所指对象。如果对象存在，调用弱引用可以获取对象；否则返回 `None` 。
+    - `weakref.ref` 类其实是低层接口，供高级用途使用，多数程序最好使用 [weakref](http://python.usyiyi.cn/translate/python_352/library/weakref.html) 工具集 和 `finalize` 。
+    - `weakref` 工具集合： `WeakKeyDictionary` 、 `WeakValueDictionary` 、`WeakSet` 、`finalize`(内部使用弱引用)
+  - **WeakValueDictionary：** 实现的是一种可变映射，里面的值是对象的弱引用。
+    - 被引用的对象在程序中的其他地方被当作垃圾回收后，对应的键会自动从 `WeakValueDictionary` 中删除。因此，`WeakValueDictionary` 经常用于缓存。
+  - **WeakSet**:  保存元素弱引用的集合类。元素没有强引用时，集合会把它删除。
+    - 如果一个类需要知道所有实例，一种好的方案是创建一个 `WeakSet` 类型的类属性，保存实例的引用。
+    - 如果使用常规的 `set` ，实例永远不会被垃圾回收，因为类中有实例的强引用，而类存在的时间与 Python 进程一样长，除非显式删除类。
+  - 弱引用局限：
+    - 基本的 `list` 和 `dict` 实例不能作为所指对象, 但是它们的子类可以作为弱引用所指对象.
+    - 基本的 `int` 、 `list` 、 `tuple` 、`string` 、`dict` 实例不能作为弱引用的目标。
+    - 但是 `set` 实例可以作为所指对象。
+    - 但是， `str` 、 `dict` 、`list` 的子类实例 和 用户自定义的类型实例 可以作为弱引用所指对象.
+    - 然而， `int` 、 `tuple` 的子类实例 也不能作为弱应用对象.
+
+**基本类型及其子类是否可以作为弱引用所指对象**
+
+类型 | 实例 | 子类实例
+-----|-----|---------
+int | n | n
+tuple | n | n
+str | n | y
+set | y | y
+list | n | y
+自定义 | y | y
 
 ```python
 # 前提： Python 控制台会自动把 _ 变量绑定到结果不为 None 的表达式结果上。
+In [1]: import weakref
+
+In [2]: a_set = {0,1}
+
+In [3]: wref = weakref.ref(a_set)  # 弱引用对象 wref
+
+In [4]: wref
+Out[4]: <weakref at 0x10f29aea8; to 'set' at 0x10e906f28>
+
+In [5]: wref()  # 返回的是被引用的对象，{0, 1}。因为是控制台会话，所以 {0, 1} 会绑定给 _ 变量。
+Out[5]: {0, 1}
+
+In [6]: a_set = {2, 3, 4}   # a_set 不再指代 {0, 1} 集合，因此集合的引用数量减少了。但是 _ 变量仍然指代它。
+
+In [7]: wref()
+Out[7]: {0, 1}
+
+In [8]: wref() is None  # 计算这个表达式时，{0, 1} 存在，因此 wref() 不是 None。但是，随后 _ 绑定到结果值 False。现在 {0, 1} 没有强引用了。
+Out[8]: False
+
+In [9]: wref() is None  # 因为 {0, 1} 对象不存在了，所以 wref() 返回 None。
+Out[9]: False  # 此时在 ipython 中， 隐藏了其他引用，所以返回False， 在 标准 Cpython解释器中，为 True.
+
+# WeakValueDictionary 示例：
+class Cheese:
+
+    def __init__(self, kind):
+        self.kind = kind
+
+    def __repr__(self):
+        return 'Cheese(%r)' % self.kind
+
+# 执行：
+In [2]: import weakref
+
+In [3]: stock = weakref.WeakValueDictionary()  # 创建弱引用字典实例。
+
+In [4]: catalog = [Cheese('Read Leicester'), Cheese('Tilsit'),Cheese('Brie'), Cheese('Parmesan')]
+
+In [6]: for cheese in catalog:
+   ...:     stock[cheese.kind] = cheese  # 名称映射到实例. [弱引用]
+   ...:
+
+In [7]: sorted(stock.keys())
+Out[7]: ['Brie', 'Parmesan', 'Read Leicester', 'Tilsit']
+
+In [8]: del catalog
+
+In [9]: sorted(stock.keys())  # 为什么还剩一个？ 因为临时变量。
+Out[9]: ['Parmesan']
+
+In [10]: del cheese
+
+In [11]: sorted(stock.keys())  # 临时变量删除后，为空.
+Out[11]: []
+
+# list, int 不能作为若引用.
+In [12]: class MyList(list):
+    ...:      """ list 的子类,实例可以作为弱引用的目标"""
+    ...:
+
+In [13]: a_list = MyList(range(10))
+
+In [14]: wref_to_a_list = weakref.ref(a_list)
+
+In [15]: _list = list(range(10))
+
+In [16]: wref_to_list = weakref.ref(_list)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-16-64f030a51bda> in <module>()
+----> 1 wref_to_list = weakref.ref(_list)
+
+TypeError: cannot create weak reference to 'list' object
+
+In [17]: _string = 'string'  # string 也不行.
+
+In [18]: wref_to_a_string = weakref.ref(_string)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-18-9f2dcf6ba75a> in <module>()
+----> 1 wref_to_a_string = weakref.ref(_string)
+
+TypeError: cannot create weak reference to 'str' object
+
+In [19]: _int = 12  # int 不行.
+
+In [20]: wref_to_int = weakref.ref(_int)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-20-da8123a191c2> in <module>()
+----> 1 wref_to_int = weakref.ref(_int)
+
+TypeError: cannot create weak reference to 'int' object
+
+In [21]: _tuple = (1,2,3)  # tuple 不行.
+
+In [22]: wref_to_tuple = weakref.ref(_tuple)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-22-764c0b0be918> in <module>()
+----> 1 wref_to_tuple = weakref.ref(_tuple)
+
+TypeError: cannot create weak reference to 'tuple' object
+
+In [23]: _dict = dict(a=1,b=2)  # dict 不行.
+
+In [24]: wref_to_dict = weakref.ref(_dict)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-24-9979a3c69214> in <module>()
+----> 1 wref_to_dict = weakref.ref(_dict)
+
+TypeError: cannot create weak reference to 'dict' object
+
+In [25]: class MyInt(int):  # int 的 子类不行.
+    ...:     pass
+    ...:
+
+In [26]: a_int = MyInt(11)
+
+In [27]: wref_to_a_int = weakref.ref(a_int)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-27-69adfbcf87a0> in <module>()
+----> 1 wref_to_a_int = weakref.ref(a_int)
+
+TypeError: cannot create weak reference to 'MyInt' object
+
+In [28]: class MyStr(str):  # str 的子类可以.
+    ...:     pass
+    ...:
+
+In [29]: a_str = MyStr('weakref')
+
+In [30]: wref_to_a_str = weakref.ref(a_str)
+
+In [31]: class MyTuple(tuple):  # tuple 的 子类不行.
+    ...:     pass
+    ...:
+
+In [33]: a_tuple = MyTuple((1,2,3))
+
+In [34]: wref_to_a_tuple = weakref.ref(a_tuple)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-34-e89498aa13ba> in <module>()
+----> 1 wref_to_a_tuple = weakref.ref(a_tuple)
+
+TypeError: cannot create weak reference to 'MyTuple' object
+
+In [35]: class MyDict(dict):  # dict 的 子类可以
+    ...:     pass
+    ...:
+
+In [36]: a_dict = MyDict(a=1,b=2)
+
+In [37]: wref_to_a_dict = weakref.ref(a_dict)
 ```
+
+- **其他：** <span id="其他"></span>
+  - 对元组 `t` 来说，`t[:]` 不创建副本，而是返回同一个对象的引用。
+  - 此外，`tuple(t)` 获得的也是同一个元组的引用。
+  - `str`、`bytes` 和 `frozenset` 实例也有这种行为。注意，`frozense`t 实例不是序列，因此不能使用 `fs[:]`（`fs` 是一个 `frozenset` 实例）。但是，`fs.copy()` 具有相同的效果：它会欺骗你，返回同一个对象的引用，而不是创建一个副本.
+    - copy 方法不会复制所有对象，这是一个善意的谎言，为的是接口的兼容性：这使得 frozenset 的兼容性比 set 强。 **两个不可变对象是同一个对象还是副本，反正对最终用户来说没有区别。**
+
+```python
+In [38]: t1 = (1,2,3)
+
+In [39]: t2 = tuple(t1)  # 返回同一个 引用.
+
+In [40]: t2 is t1
+Out[40]: True
+
+In [41]: t3 = t1[:]
+
+In [42]: t3 is t2
+Out[42]: True
+
+# 共享对象：字符串字面量可能会创建共享的对象
+In [43]: t1 = (1,2,3)
+
+In [44]: t3 = (1,2,3)
+
+In [45]: t3 is t1  # 相等，但不是同一个对象。
+Out[45]: False
+
+In [46]: s1 = 'ABC'
+
+In [47]: s2 = 'ABC'
+
+In [48]: s2 is s1  # 指向同一个 字符串对象， 一种优化措施，称为 驻留（interning）
+Out[48]: True
+
+# CPython 还会在小的整数上使用这个优化措施，防止重复创建“热门”数字，如 0、-1 和 42。注意，CPython 不会驻留所有字符串和整数，驻留的条件是实现细节，而且没有文档说明。
+```
+
+- **延伸阅读** <span id="延伸阅读"></span>
+  - [Data Model](https://docs.python.org/3/reference/datamodel.html) ,Python 语言参考手册中开头清楚解释了对象的标识和值。
+  - [Python 103: Memory Model & Best Practices](http://conferences.oreilly.com/oscon/oscon2013/public/schedule/detail/29374), 演讲页面 可以参考很多主题. [YouTube](https://www.youtube.com/watch?v=HHFCFJSPWrI) 视频
+  - [Python Module of the Week](http://pymotw.com/), Doug Hellmann 所写一长串精彩的博客文章, 后来集结成书，即《Python 标准库》[py2](https://pymotw.com/2/)和[py3](https://pymotw.com/3/)
+    - [copy - Duplicate Objects](http://pymotw.com/2/copy/) 和 [weakref - Garbage-Collectable References to Objects](http://pymotw.com/2/weakref/) 两篇涵盖本章内容，其中copy有基于新版本的python3, [copy-py3](https://pymotw.com/3/copy/) , weakref 的python3 版本为 [weakref - Impermanent References to Objects](https://pymotw.com/3/weakref/)
+  - [gc](https://docs.python.org/3/library/gc.html), CPython 分代垃圾回收程序的更多信息.
+    - 文档开头的第一句话是：“这个模块为可选的垃圾回收程序提供接口。”“可选的”这个修饰词可能让人惊讶，不过“[Data Model](https://docs.python.org/3/reference/datamodel.html)”一章也说：
+      - **垃圾回收可以延缓实现，或者完全不实现——如何实现垃圾回收是实现的质量问题，只要不把还能获得的对象给回收了就行。**
+  - [How Does Python Manage Memory?](http://effbot.org/pyfaq/how-does-python-manage-memory.htm), Fredrik Lundh（很多核心库的创建者，如 ElementTree、Tkinter 和图像库 PIL）所写的一篇短文，谈论了 Python 的垃圾回收程序。强调垃圾回收程序是一种实现的特性，其行为在不同的 Python 解释器中有所不同。例如，Jython 用的是 Java 垃圾回收程序。
+  - [PEP 442—Safe object finalization](https://www.python.org/dev/peps/pep-0442/), CPython 3.4 改进了处理有 `__del__` 方法的对象的方式
+  - [字符串驻留](https://en.wikipedia.org/wiki/String_interning), 维基百科中一篇文章,提到了几种语言对这个技术的利用，包括 Python。
