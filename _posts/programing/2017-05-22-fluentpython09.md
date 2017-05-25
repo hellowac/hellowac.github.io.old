@@ -24,6 +24,8 @@ show: true
 - [格式化显示](#格式化显示)
 - [私有属性](#私有属性)
 - [`__slots__`类属性](#__slots__类属性)
+- [覆盖类属性](#覆盖类属性)
+- [延伸阅读](#延伸阅读)
 
 
 **pythonic的对象** <span id="pythonic的对象"></span>
@@ -331,3 +333,50 @@ class Vector2d:
 - 每个子类都要定义 `__slots__` 属性，因为解释器会忽略继承的 `__slots__` 属性。
 - 实例只能拥有 `__slots__` 中列出的属性，除非把 '`__dict__`' 加入 `__slots__` 中（这样做就失去了节省内存的功效）。
 - 如果不把 '`__weakref__`' 加入 `__slots__`，实例就不能作为弱引用的目标。
+
+如果程序不用处理数百万个实例，或许不值得费劲去创建不寻常的类，那就禁止它创建动态属性或者不支持弱引用。
+与其他优化措施一样，仅当权衡当下的需求并仔细搜集资料后证明确实有必要时，才应该使用 `__slots__` 属性。
+
+**覆盖类属性** <span id="覆盖类属性"></span>
+
+类属性可用于为实例属性提供默认值。但是，如果为不存在的实例属性赋值，会新建实例属性。
+
+如果想修改类属性的值，必须直接在类上修改，不能通过实例修改。
+
+如果想修改所有实例（没有 typecode 实例变量）的 typecode 属性的默认值，可以这么做：`类.属性名 = 值` ,这样所有实例的该属性默认值就改变了。
+
+然而，有种修改方法更符合 Python 风格，而且效果持久，也更有针对性。类属性是公开的，因此会被子类继承，于是经常会创建一个子类，只用于定制类的数据属性。
+
+Django 基于类的视图就大量使用了这个技术。
+
+如：
+
+```python
+>>> from vector2d_v3 import Vector2d
+>>> class ShortVector2d(Vector2d):  # 继承自 Vector2d ，只覆盖 typecode 属性。
+...     typecode = 'f'
+...
+>>> sv = ShortVector2d(1/11, 1/27)  # 创建一个实例
+>>> sv
+ShortVector2d(0.09090909090909091, 0.037037037037037035)  # 查看 __repr__ 的值
+>>> len(bytes(sv))  # 确认得到的字节序列长度为 9 字节，而不是之前的 17 字节。
+9
+```
+
+这也说明在 `Vecto2d.__repr__` 方法中为什么没有硬编码 `class_name` 的值，而是使用 `type(self).__name__` 获取.
+
+```python
+# 在Vector2d类中定义
+
+    def __repr__(self):
+        class_name = type(self).__name__
+        return '{}({!r}, {!r})'.format(class_name, *self)
+```
+
+如果硬编码 `class_name` 的值，那么 `Vector2d` 的子类（如 `ShortVector2d`）要覆盖 `__repr__` 方法，只是为了修改 `class_name` 的值。从实例的类型中读取类名，`__repr__` 方法就可以放心继承。
+
+**延伸阅读** <span id="延伸阅读"></span>
+
+- [3.3.1. Basic customization](https://docs.python.org/3/reference/datamodel.html#basic-customization) , 大部分用户定制方法。
+- `__index__` 特殊方法，这个方法的作用是强制把对象转换成整数索引，在特定的序列切片场景中使用，以及满足 NumPy 的一个需求。在实际编程中， 基本用不到，除非决定新建一种数值类型，并想把它作为参数传给 `__getitem__` 方法。 可以参考：[What's New in Python 2.5](https://docs.python.org/2.5/whatsnew/pep-357.html) 和 [PEP 357—Allowing Any Object to be Used for Slicing](https://www.python.org/dev/peps/pep-0357/)
+- [How to Display an Object as a String: printString and displayString](http://esug.org/data/HistoricalDocuments/TheSmalltalkReport/ST07/04wo.pdf), 讨论了 Smalltalk 对 `printString` 和 `displayString` 方法的实现。说明 `repr()` 和 `str()` 的作用, 即“ **便于开发者理解的方式** ”和“ **便于用户理解的方式** ”。
