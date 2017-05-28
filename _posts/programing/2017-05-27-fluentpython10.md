@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "流畅的python - python风格的对象"
+title: "流畅的python - 序列协议"
 author: "wangchao"
 tags:
   - python
