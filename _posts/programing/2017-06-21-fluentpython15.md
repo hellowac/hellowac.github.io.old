@@ -5,9 +5,9 @@ title: "流畅的python - 上下文管理和else语句"
 author: "wangchao"
 tags:
   - python
-  - '对象'
-  - '继承'
-  - 'Django'
+  - 'else'
+  - 'with'
+  - '上下文'
 category:
   - 'Programing Teach'
 show: true
