@@ -111,39 +111,35 @@ Some questions require "do" or "does."
 ### Reading Time : 阅读时间
 
 - **Vocabulary：**
-  - `allowance`: money that parents give to their children weekly or monthly. Many children work around the house in order to receive this money.
-  - `aquarium`: a glass container for fish; a fish tank
-  - `buy`: purchase
-  - `fake`: not real; artificial
-  - `fancy`: special
-  - `pet`: an animal that people keep for companionship--not food.
-  - `responsibility`: the care a person gives to another person or a thing
+  - `bedding`: soft material for an animal to sleep on.
+  - `cage`: an indoor or outdoor home for an animal.
+  - `cute`:  beautiful; pretty.
+  - `Easter`: a Christian holiday that celebrates the death and resurrection (rebirth) of Jesus Christ.
+  - `escape`:  to run away.
+  - `loose`: free; uncaged.
 
-My son, Kevin, bought a goldfish yesterday.
-He went to the pet store and bought a fancy goldfish with money from his allowance.
-He gets a five-dollar allowance every week.
+Kimberly has a pet rabbit.
+Her parents gave it to her for `Easter`.
+She was very excited to get it.
+She named her rabbit Edward.
 
-He needed to buy a few other things for the fish.
-He bought a small aquarium, some fish food, some `plastic rocks`(塑性岩石) and `plants`(植物), and a book about goldfish.
-The total `bill`(账单) came to $36.09.
+Kimberly has always wanted a pet rabbit.
+Rabbits are soft and cute.
+They don't make a lot of noise, and they're fun to hold.
+Kimberly holds Edward all the time.
 
-When he got home, he put water into the aquarium.
-He also put in the plastic rocks and the fake plants.
-He wanted the fish to have a beautiful place to live in.
-Finally, after the water was at room temperature(温度), he put the fish into the aquarium.
-The goldfish looked happy to be in its new home.
-
-It's a good idea for children to have pets.
-They learn about `responsibility`(担责), and they learn about the animal that they care for.
-The most popular pets are dogs, cats, and fish.
+Right now she keeps Edward in a large box with a bowl of water, animal bedding, and rabbit food.
+Kimberly's going to build a cage for the rabbit.
+She doesn't want him to escape.
+If he gets loose, he might not come back.
 
 **How much do you remember from the reading ? Fill in the blanks.**
 
-- 1A: What did my son buy?
-- 1B: He `____` a goldfish. (买)
-- 2A: How much did the goldfish and everything else cost?
-- 2B: it `____` $36.09. (成本)
-- 3A: Where did he put the fish?
-- 3B: He put the fish into an `____`. (鱼缸)
+- 1A: What did Kimberly get?
+- 1B: She got a pet `____`. (兔子)
+- 2A: Who gave it to her?
+- 2B: Her `____` gave it to her. （父母）
+- 3A: What did she name her rabbit?
+- 3B: She named her rabbit `____`.
 
-**Answers** : 1. bought; 2. cost; 3. aquarium
+**Answers** : 1. rabbit; 2. parents; 3. Edward
