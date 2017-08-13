@@ -11,4 +11,4 @@ title: "参考"
 
 - [GitHub仓库]({% link refer/2017-03-20-github-repository.md %})
 - [python]({% link refer/2017-01-01-pythontips.md %})
-- [常用链接]({% link refer/2017-01-10-编程参考.md %})
+- [编程参考]({% link refer/2017-01-10-编程参考.md %})
