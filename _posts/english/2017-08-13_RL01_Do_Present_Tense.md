@@ -45,102 +45,122 @@ He doesn't need ___		 |
 She doesn't need ___	 |	They dont't need ___
 It doesn't need ___ |
 
-**Remember**: You must have an object or an infinitive after "`need`."
+The verb "`do`" can be used to make a `statement`:
 
-- `They don't need a new car.` (The word "car" is a noun that functions as an object in this sentence.)
-- `She doesn't need to work tomorrow`. ("To work" is an infinitive.)
-- `This flashlight doesn't need batteries.` (The word "need" is often used with things. It doesn't need batteries.)
+`I do the laundry every weekend.`
 
-**Questions:** The verb "need" is often used in questions:
+... but it is usually used to make `the present tense` or `the past tense` negative.
 
-- `Is there something that you need ?`
-- `What does he need to do today ?`
-- `Do you need anything from the store ?`
-- `Why do you need to work on Saturday ?`
-- `Will I need to wear a jacket today ?`
+`I don't have any money.`
 
-**From the video:** [youtube](https://youtu.be/wnnYt5P2lLA)
+`He didn't go to store yesterday.`
 
-- **Past Tense:**
-  - I needed some water.
-  - You needed some advice.
-  - He needed a book.
-  - She needed a ride.
-  - It needed a new engine.
-  - we needed a new computer.
-  - You needed something to eat.
-  - They needed some sleep.
-- **Past Tense - negative**
-  - I didn't need any water.
-  - You didn't need any advice.
-  - He didn't need a book.
-  - She didn't need a ride.
-  - It didn't need a new engine.
-  - We didn't need a new computer.
-  - You didn't need anything to eat.
-  - They didn't need any sleep.
+It's also used when making questions:
 
-**Here are some examples :**
-- A: What do you need from the store ?
-  - B: `I need some bread.` or `I need to get some bread.`
-- A: Does he need to go to school today ?
-  - B: `Yes, he need to go to school.` or ...
-  - B: Yes, he does.
-  - B: Yes, he needs. (Don't make a sentence like this!)
-- A: How many potatoes do we need ?
-  - B: We need at least ten potatoes.
-- A: How much lettuce do we need ?
-  - B: We need three heads of lettuce.
+`Do you what time it is ?`
 
-**Practice :**
+`Does he have a coat ?`
 
-Directions:Fill in the blanks with the correct form of the verb "need."
-Some questions require "do" or "does."
+**Examples:**
 
-- What ___ he ___ ?  (does, need)
-- He ___ a pencil. (needs)
-- ___ you ___ any help?  (Do, need)
-- I ___ ___ this. (negative) (don't need)
-- Who ___ more to eat? (needs)
-- This flashlight ___ batteries. (needs)
-- The students ___ books. (need)
-- I ___ ___ to go to work today. (negative) (don't need)
-- When ___ they ___ to leave? (do, need)
-- My car ___ an oil change. (needs)
+- I wear glasses.
+    - I `don't see` well without my glasses.
+    - `Do` you `wear` glasses ?
+- You speak English.
+    - You `don't speak` Chinese.
+    - `Do` you `speak` Vietnamese?
+- He works on a computer at work.
+    - He `doesn't work` outside.
+    - `Does` he `like` his job ?
+- She rides a bike to work.
+    - She `doesn't have` a car.
+    - `Does` she `wear` a helmet ?
+        - Yes, she `does`.
+- It looks ripe. (ripe = ready to eat.)
+    - It `doesn't grow` in the winter in Minnesota.
+    - `Does` it `grow` in the spring ?
+        - Yes, It does.
+- We live in Minnesota.
+    - We `don't live` in Canada.
+    - `Do` we `like` Minnesota ?
+        - Yes, we do .  or ...
+        - Yes, we like Minnesota.
+- You play football.
+    - You `don't play` tennis.
+    - Do you play football all year long ?
+        - NO, We don't , We play in the fall.
+- They walk their dogs every day.
+    - They `don't take` their cats for a `walk`.
+    - `Do` they `walk` their dogs on a leash.
+        - Yes, they do.
 
+The verb "do" is a very important verb.
+
+We use it to make the present tense,
+the present tense negative,
+and for asking questions.
+
+**Examples:**
+
+`I do many things on the weekend.` (present tense, "do" is the main verb)
+
+`He doesn't like to go to the store.` (present tense negative, "like" is the main verb)
+
+`Do you want to see a movie?` (present tense question, "want" is the main verb)
+
+"Do" is often used as a main verb, but only for **particular activities**,
+such as housework, cleaning, studying, research, and shopping.
+
+**Examples:**
+
+`I do the dishes every night.` (do = wash)
+
+`She does her grocery shopping at Cub.` (do = go/finish)
+
+`They do their homework at the library.` (do = complete)
+
+The past tense form of "do" is "did."
+
+**Examples:**
+
+`I did the dishes last night.`
+
+`She did her grocery shopping at Cub.`
+
+"Do" is also used for creating emphasis:
+
+**Example:**
+
+**A**: You don't like this very much.
+
+**B**: No. I do like it!
 
 ### Reading Time : 阅读时间
 
-- **Vocabulary：**
-  - `bedding`: soft material for an animal to sleep on.
-  - `cage`: an indoor or outdoor home for an animal.
-  - `cute`:  beautiful; pretty.
-  - `Easter`: a Christian holiday that celebrates the death and resurrection (rebirth) of Jesus Christ.
-  - `escape`:  to run away.
-  - `loose`: free; uncaged.
+Stan likes to ride his bike.
+He rides to and from work every day,
+and he rides his bike on the weekend for `recreation` and fun.
+Sometimes he rides on a bike path,
+but more often he rides in the street along with `regular` `traffic`.
 
-Kimberly has a pet rabbit.
-Her parents gave it to her for `Easter`.
-She was very excited to get it.
-She named her rabbit Edward.
-
-Kimberly has always wanted a pet rabbit.
-Rabbits are soft and cute.
-They don't make a lot of noise, and they're fun to hold.
-Kimberly holds Edward all the time.
-
-Right now she keeps Edward in a large box with a bowl of water, animal bedding, and rabbit food.
-Kimberly's going to build a cage for the rabbit.
-She doesn't want him to escape.
-If he gets loose, he might not come back.
+Stan wears a helmet for safety,
+and he always `signals` his turns when riding in `traffic`.
+He `stretches` his left arm out `straight` when making a left turn,
+and he `stretches` his right arm out `straight` when making a right turn.
+State law in Minnesota requires that people on bikes ride on the right-hand side of the road.
+Also, `according` to state law, drivers of cars must give `bicyclists` at least three feet of space when passing.
 
 **How much do you remember from the reading ? Fill in the blanks.**
 
-- 1A: What did Kimberly get?
-- 1B: She got a pet `____`. (兔子)
-- 2A: Who gave it to her?
-- 2B: Her `____` gave it to her. （父母）
-- 3A: What did she name her rabbit?
-- 3B: She named her rabbit `____`.
+- 1A: What does Stan ride to work?
+- 1B: He _____ a bike. (骑行)
+- 2A: What _____ he wear to keep safe?
+- 2B: He wears a helmet.
+- 3A: Which arm does he use for a left turn?
+- 3B: He _____ his left arm.
+- 4A: On what side of the road do people ride their bikes?
+- 4B: They _____ on the right-hand side.
+- 5A: How much room must drivers give to people who ride bikes on the street?
+- 5B: They must give at least three ______.
 
-**Answers** : 1. rabbit; 2. parents; 3. Edward
+**Answers** : 1. rides; 2. does; 3. uses; 4. ride; 5. feet.
