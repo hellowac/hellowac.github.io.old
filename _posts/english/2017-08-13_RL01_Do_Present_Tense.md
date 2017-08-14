@@ -16,7 +16,7 @@ show: true
 [{{ site.nav.blog.subnav.english.name }}]({% link blog/english/index.md %})/
 {{ page.title }}
 
-## need : 需要...
+## do
 
 **Present Tense**
 
