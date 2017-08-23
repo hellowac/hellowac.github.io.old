@@ -105,6 +105,8 @@ GEM
     jekyll-github-metadata (2.3.1)
       jekyll (~> 3.1)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-google_cse (1.0.0)
+      jekyll (~> 3.0)
     jekyll-mentions (1.2.0)
       activesupport (~> 4.0)
       html-pipeline (~> 2.3)
@@ -200,10 +202,11 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-google_cse
   jekyll-theme-architect!
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.13.7

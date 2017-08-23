@@ -3,12 +3,12 @@
         <a href="{{ '/' | absolute_url }}">
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2> 
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
         {% if site.github.is_project_page %}
-            <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a> 
-        {% endif %} 
+            <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a>
+        {% endif %}
         {% if site.github.is_user_page %}
-            <a href="{{ site.github.repository_url }}" class="button"><small>Follow me on</small> GitHub</a> 
+            <a href="{{ site.github.repository_url }}" class="button"><small>Follow me on</small> GitHub</a>
         {% endif %}
         <nav id="nav">
             <ul>
@@ -29,9 +29,11 @@
 
                 <li class="{% if page.nav == 'refer' %} active {% else %} deactive {% endif %}">
                     <a href="{{ site.baseurl }}{% link refer/index.md %}">{{ site.nav.refer.name }}</a></li>
+
+                <li class="{% if page.nav == 'search' %} active {% else %} deactive {% endif %}">
+                    <a href="{{ site.baseurl }}{% link search.md %}">搜索</a></li>
             </ul>
         </nav>
     </div>
-    
-</header>
 
+</header>
