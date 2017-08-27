@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Red level 03 - Do - and - Did"
+title: "英语学习 Red level 03 Do (present tense) and Did(past tense)"
 author: "Pual"
 tags:
   - English
