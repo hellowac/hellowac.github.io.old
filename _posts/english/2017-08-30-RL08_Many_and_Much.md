@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Red level 08 Many and Much
+title: "英语学习 Red level 08 Many and Much"
 author: "Pual"
 tags:
   - English

@@ -1,7 +1,7 @@
 ---
 nav: blog
 layout: post
-title: "英语学习 Red level 07 Special Uses for the Verb "Do"
+title: "英语学习 Red level 07 Special Uses for the Verb 'Do'"
 author: "Pual"
 tags:
   - English
