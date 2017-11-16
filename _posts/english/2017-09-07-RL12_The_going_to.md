@@ -165,7 +165,7 @@ and the ride is a little bumpy.
 There's also no windshield.
 It's not at all like driving a car.
 
-Frank always wears a helmet on his head and other protection for his body when he competes.
+Frank always wears a `helmet` on his head and other protection for his body when he competes.
 He wears long-sleeved shirts and long pants.
 He has never crashed,
 but he wants to be prepared in case he does.
