@@ -15,7 +15,7 @@ title: ""
 {% for post in site.posts limit:20 %}
 {% if post.show %}
 
-* [{{ post.title }}]({{ post.url | absolute_url }})
+* [{{ post.title }}]({{ post.url }})
 
 {% endif %}
 {% endfor %}
