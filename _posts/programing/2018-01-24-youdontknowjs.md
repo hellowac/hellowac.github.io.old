@@ -1,12 +1,10 @@
 ---
 nav: blog
 layout: post
-title: "流畅的python - Dynamic attributes and properties"
+title: "你不知道的javascript(上)"
 author: "wangchao"
 tags:
-  - python
-  - 'Future'
-  - '并行'
+  - javascript
 category:
   - 'Programing Teach'
 show: true
