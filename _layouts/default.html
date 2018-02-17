@@ -1,46 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Responsive Nav &middot; Advanced Left Navigation Demo</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/responsive-nav.css"><![endif]-->
-    <!--[if gt IE 8]><!--><link rel="stylesheet" href="/assets/css/responsive-nav.css"><!--<![endif]-->
-    <link rel="stylesheet" href="/assets/css/app.css">
+<html>
+  {% include head.html %}
 
-    <script>
-      var doc = document, docEl = doc.documentElement;
-      docEl.className = docEl.className.replace(/(^|\s)no-js(\s|$)/, " js ");
-    </script>
-
-    <!-- jquery -->
-    <!-- <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.js"></script> -->
-    <script src="/assets/js/jquery.min.js"></script>
-    <!-- 响应式导航 -->
-    <script src="/assets/js/responsive-nav.js"></script>
-
-    <!-- <script src="responsive-nav.js"></script> -->
-  </head>
   <body>
-
-    <div role="navigation" id="nav">
-      <ul>
-        <li class="{% if page.nav == 'home' %} active {% else %} deactive {% endif %}"><a href="/">Home</a></li>
-        <li class="{% if page.nav == 'blog' %} active {% else %} deactive {% endif %}"><a href="/blog">Blog</a></li>
-        <li class="{% if page.nav == 'project' %} active {% else %} deactive {% endif %}"><a href="/project">Projects</a></li>
-        <li class="{% if page.nav == 'about' %} active {% else %} deactive {% endif %}"><a href="/about">About</a></li>
-      </ul>
+    {% include nav.html %}
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        {{ content }}
+      </div>
     </div>
 
-    <div role="main" class="main ">
-      <a href="#nav" id="toggle">Menu</a>
-      <h2>{{ page.title }}</h2>
-      {{ content }}
-
-    <script>
-      var navigation = responsiveNav("#nav", {customToggle: "#toggle"});
-    </script>
-    
+    {% include footer.html %}
   </body>
 </html>

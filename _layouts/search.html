@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include nav.html %}
+    <div id="content-wrapper">
+        <div class="inner clearfix">
+          {{ content }}
+        </div>
+    </div>
+    <script>
+      (function() {
+        var cx = '017517964548776840108:3z8uwrvey_q';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <div style="width:940px; margin:auto;">
+        <gcse:searchbox></gcse:searchbox>
+        <gcse:searchresults></gcse:searchresults>
+    </div>
+
+    {% include footer.html %}
+  </body>
+
+</html>

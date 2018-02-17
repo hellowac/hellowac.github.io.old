@@ -1,15 +1,26 @@
 ---
 nav: home
 layout: post
-title: "建立本站需要查阅的资料"
+title: ""
 ---
 
-## 建立本站需要查阅的网站
+{{ site.nav.home.name }}/
 
-* **Jekyll介绍** <http://jekyllrb.com/>
-* **YAML格式:** <http://www.ruanyifeng.com/blog/2016/07/yaml.html?f=tt>
-* **Mark Down:** <https://guides.github.com/features/mastering-markdown/>
-* **bootstrap:** <http://www.bootcss.com/>
-* **liquid模版:** <https://shopify.github.io/liquid/>
-* **Liquid基础语法:** <http://www.cnblogs.com/lslvxy/p/3651936.html>
-* **Gem介绍:** <http://www.jianshu.com/p/728184da1699>
+## 最近发表
+
+{% comment %} 
+最多输出几次
+{% endcomment %}
+
+{% for post in site.posts limit:20 %}
+{% if post.show %}
+
+* [{{ post.title }}]({{ post.url }})
+
+{% endif %}
+{% endfor %}
+
+
+
+
+
