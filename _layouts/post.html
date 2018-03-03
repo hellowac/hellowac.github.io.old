@@ -1,8 +1,37 @@
----
-layout: default
----
-<div class="inner clearfix">
-    <section id="main-content"> {{ content }}</section>
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+{% include nav.html %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('/assets/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="site-heading">
+                    <h1>{{ site.title | default: site.github.repository_name }}</h1>
+                    <!--<span class="subheading">{{ site.description | default: site.github.project_tagline }}</span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container ">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            {{ content }}
+        </div>
+    </div>
 </div>
+
+<hr>
+
+{% include footer.html %}
+</body>
+</html>
 
 

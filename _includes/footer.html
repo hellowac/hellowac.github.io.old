@@ -1,6 +1,46 @@
-<footer id="site_footer">
-  <p style="text-align: center;"><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on GitHub | Copyright 2005 - 2017 by <a href="{{ site.url }}">{{ site.author }}</a> | <span class="label label-info">{{ site.create_time }}</span></small></p>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="{{ site.github.repository_url }}" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; hellowac 2018</p>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ '/assets/vendor/jquery/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{{ '/assets/js/clean-blog.min.js' | relative_url }}"></script>
 
 {% if site.google_analytics %}
   <script>

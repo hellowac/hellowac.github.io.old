@@ -7,4 +7,12 @@
 - [职业相关](//hellowac.github.io/blog/programing/)
 - [阅读相关](//hellowac.github.io/blog/reading/)
 
+## 执行方式
+
+项目目录下
+
+```
+bundle exec jekyll serve
+```
+
 
