@@ -268,9 +268,85 @@ show: true
 
 **如果一条直线通过点<code>（x<sub>1</sub>, y<sub>1</sub>）</code> 和 <code>(x<sub>2</sub>, y<sub>2</sub>)</code>, 则它的斜率等于![线性函数]({% link assets/thecalculuslifesaver/01_10.png %})**
 
-
-
-
 <span id="常见函数及其图像"></span>
 
 ### 常见函数及其图像
+
+**多项式:**
+
+有许多函数是基于 `x` 的非负次幂建立起来的. 可以以 `1`、`x`、<code>x<sup></sup></code> 、<code>x<sup>3</sup></code> 等为基本项, 然后用实数同这些基本项做乘法, 最后把有限个这样的项加到一起. 
+
+例如, 多项式 <code>f(x) = 5x<sup>4</sup> - 4x<sup>3</sup> +10</code> 是由 <code>x<sup></sup></code> 的 `5` 倍加 <code>x<sup>3</sup></code> 的 `-4` 倍加 `10` 而形成的. 
+
+可能也想加中间的基本项 <code>x<sup>2</sup></code> 和 `x` , 但由于它们没有出现, 所以我们可以说零倍的 <code>x<sup>2</sup></code> 和零倍的 `x`. 基本项 <code>x<sup>2</sup></code> 的倍数叫作 <code>x<sup>n</sup></code> 的系数. 
+
+例如, 刚才的多项式 <code>x<sup>4</sup></code> 、<code>x<sup>3</sup></code> 、<code>x<sup>2</sup></code> 、`x` 和 `常数项` 的系数分别为 `5`、`-4`、`0`、`0` 和 `10`. (为什么会有 `x` 和 `1` 的形式? 这两项看上去与其他项不同, 但它们实际上是一样的, 因为 <code>x = x<sup>1</sup></code>, <code>x = x<sup>0/sup></code>.) 最大的幂指数 `n` (该项系数不能为零) 叫作多项式的次数. 
+
+例如上述多项式的次数为 `4`, 因为不存在比 `4` 大的 `x` 的幂指数. 次数为 `n` 的多项式的数学通式为  <img src="http://private.codecogs.com/gif.latex?p(x%29=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_2x^2+a_1x+a_0," alt="p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_2x^2+a_1x+a_0,"> 其中 <code>a<sub>n</sub></code> 为 <code>x<sup>n</sup></code> 的系数, <code>a<sub>n-1</sub></code> 为 <code>x<sup>n-1</sup></code> 的系数, 以此类推, 直到最后一项 `1` 的系数为 <code>a<sub>n</sub></code>.
+
+由于 <code>x<sup>n</sup></code> 是所有多项式的基本项, 因而你应该知道它们的图像是什么样的. 偶次幂的图像之间是非常类似的; 同样, 奇次幂的图像之间也很类似. 下图 是从 <code>x<sup>0</sup></code> 到 <code>x<sup>7</sup></code> 的图像.
+
+![多项式]({% link assets/thecalculuslifesaver/01_11.png %})
+
+一般的多项式的图像是很难画的. 除非是很简单的多项式, 否则连 `x` 轴的截距都经常很难找到. 不过, 多项式的图像左右两端的走势倒是容易判断. 
+
+这是由最高次数的项的系数决定的, 该系数叫作`首项系数`. <code>a<sub>n</sub></code> 就为上述多项式通式的首项系数. 例如, 刚才提到的多项式 <code>5x<sup>4</sup> - 4x<sup>3</sup> +10</code>, `5` 为它的首项系数. 实际上, 只需考虑首项系数正负以及多项式次数的奇偶就能判断图像两端的走势了. 
+
+所以图像两端的走势共有如下四种情况:
+
+![多项式01]({% link assets/thecalculuslifesaver/01_12.png %})
+
+**二次函数（首项系数为2）**： 即 <code>p(x) = ax<sup>2</sup> + bx<sup></sup> + c </code> , 可以根据判别式 <code>Δ = b<sup>2</sup> - 4ac</code> 可以判断该二次函数到底有两个、一个还是没有实数解. 
+
+- 如果 `Δ > 0`, 有两个不同的解; 
+- 如果 `Δ = 0`, 只有一个解, 也可以说有两个相同的解; 
+- 如果 `Δ < 0`, 在实数范围内无解. 
+
+- 对于前两种情况, 解为 <img src="http://private.codecogs.com/gif.latex?\frac{-b\pm\sqrt{b^2-4ac}}{2a}." alt="\frac{-b\pm\sqrt{b^2-4ac}}{2a}.">
+
+二次函数的一个重要技术是`配方`。例如： 将 <code>2x<sup>2</sup> - 3x + 10</code> 配方 成 <img src="http://private.codecogs.com/gif.latex?2\biggl(x-\frac{3}{4}\biggr%29^2+\frac{71}{8}" alt="2\biggl(x-\frac{3}{4}\biggr%29^2+\frac{71}{8}">
+
+**有理函数：**  形如 <img src="http://private.codecogs.com/gif.latex?\frac{p(x)}{q(x)}." alt="\frac{p(x)}{q(x)}."> , 其中 `p` 和 `q` 为多项式的函数, 叫作`有理函数`. 有理函数变化多样, 它的图像根据 `p` 和 `q` 两个多项式的变化而变化. 
+
+最简单的有理函数是多项式本身, 即 `q(x)` 为 `1` 的有理函数. 另一个简单的例子是 <img src="http://private.codecogs.com/gif.latex?\frac{1}{x^n}." alt="\frac{1}{x^n}."> 其中 `n` 为正整数. 下图是一些有理函数的图像.
+
+![有理函数]({% link assets/thecalculuslifesaver/01_13.png %})
+
+奇次幂的图像之间类似, 偶次幂的图像之间也很类似. 知道这些图像长什么样子是有帮助的.
+
+**指数函数和对数函数:** 如 <code>y = 2<sup>x</sup></code> 的函数:
+
+![指数函数]({% link assets/thecalculuslifesaver/01_14.png %})
+
+<code>y = b<sup>x</sup></code> `(b > 1)` 的图像都与上图类似. 注意：`首先, 该函数的定义域为全体实数; 其次, y 轴的截距为 1 并且值域为大于零的实数; 最后, 左端的水平渐近线为 x 轴. ` `该图像非常接近于 x 轴, 但永远不会接触到 x 轴`。 如图：
+
+![指数函数]({% link assets/thecalculuslifesaver/01_15.png %})
+
+对数 <code>y = log<sub>2</sub>(x)</code> 的函数，其实就是 函数 <code> y = 2<sup>x</sup></code> 的反函数, 如图:
+
+![对数函数]({% link assets/thecalculuslifesaver/01_16.png %})
+
+也就是说，对数和指数函数，互为反函数。
+
+**三角函数：** 下章介绍
+
+**带有绝对值的函数:** 先看一下形如 `f (x) = |x|` 的 `绝对值函数`. 该函数的定义为： <img src="http://www1.ituring.com.cn/figures/2016/Calculus/06.d01z.024.png" alt="" width="55%" style="width: 55%">
+
+另一个看待这个绝对值函数的方法是, 它表示数轴上 `0` 和 `x` 的距离. 更一般而言, 应该知道这个重要事实：`|x - y|` 是数轴上 `x` 和 `y` 两点间的距离.
+
+假设需要在数轴上找出区域 `|x - 1| ≤ 3`. 可以将该不等式阐释为 `x` 和 `1` 之间的距离小于或等于 `3`. 也就是说, 要找到所有与 `1` 之间的距离不大于 `3` 的点. 所以可以画一个数轴并标记 `1` 的位置, 如图：
+
+![绝对值值域]({% link assets/thecalculuslifesaver/01_17.png %})
+
+所以区域 `|x - 1| ≤ 3` 也可表示为 `[-2, 4]`.
+
+如果知道一个函数的图像, 那么可以这样得到这个函数的绝对值的图像, 即以 `x` 轴为镜子, 把 `x` 轴下方的图像映射上来, `x` 轴上方的图像保持不变。
+
+例如 <code> y = |x| </code> 的图像:
+
+![绝对值值域]({% link assets/thecalculuslifesaver/01_19.png %})
+
+则 <code>y = |log<sub>2</sub>(x)|</code> 的图像:
+
+![绝对值值域]({% link assets/thecalculuslifesaver/01_18.png %})
+
